@@ -1,6 +1,6 @@
 ﻿namespace Super_Market_POS
 {
-    partial class Form2
+    partial class Form10
     {
         /// <summary>
         /// Required designer variable.
