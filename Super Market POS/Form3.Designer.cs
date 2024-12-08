@@ -32,15 +32,15 @@
             this.lblsearch = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,65 +76,65 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
+            this.colID,
+            this.colName,
+            this.colCompany,
+            this.colContact,
+            this.colAddress,
+            this.colEmail,
+            this.colProduct,
+            this.colDescription,
+            this.colDate});
             this.dataGridView1.Location = new System.Drawing.Point(6, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(791, 150);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
+            // colID
             // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
+            this.colID.HeaderText = "Id";
+            this.colID.Name = "colID";
             // 
-            // Column2
+            // colName
             // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.Name = "Column2";
+            this.colName.HeaderText = "Name";
+            this.colName.Name = "colName";
             // 
-            // Column3
+            // colCompany
             // 
-            this.Column3.HeaderText = "Company";
-            this.Column3.Name = "Column3";
+            this.colCompany.HeaderText = "Company";
+            this.colCompany.Name = "colCompany";
             // 
-            // Column4
+            // colContact
             // 
-            this.Column4.HeaderText = "Contact";
-            this.Column4.Name = "Column4";
+            this.colContact.HeaderText = "Contact";
+            this.colContact.Name = "colContact";
             // 
-            // Column5
+            // colAddress
             // 
-            this.Column5.HeaderText = "Address";
-            this.Column5.Name = "Column5";
+            this.colAddress.HeaderText = "Address";
+            this.colAddress.Name = "colAddress";
             // 
-            // Column6
+            // colEmail
             // 
-            this.Column6.HeaderText = "Emall";
-            this.Column6.Name = "Column6";
+            this.colEmail.HeaderText = "Emall";
+            this.colEmail.Name = "colEmail";
             // 
-            // Column7
+            // colProduct
             // 
-            this.Column7.HeaderText = "product";
-            this.Column7.Name = "Column7";
+            this.colProduct.HeaderText = "product";
+            this.colProduct.Name = "colProduct";
             // 
-            // Column8
+            // colDescription
             // 
-            this.Column8.HeaderText = "Description";
-            this.Column8.Name = "Column8";
+            this.colDescription.HeaderText = "Description";
+            this.colDescription.Name = "colDescription";
             // 
-            // Column9
+            // colDate
             // 
-            this.Column9.HeaderText = "Date";
-            this.Column9.Name = "Column9";
+            this.colDate.HeaderText = "Date";
+            this.colDate.Name = "colDate";
             // 
             // Form3
             // 
@@ -159,14 +159,14 @@
         private System.Windows.Forms.Label lblsearch;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCompany;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colContact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
     }
 }
