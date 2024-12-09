@@ -88,7 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblsearch.AutoSize = true;
             this.lblsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsearch.Location = new System.Drawing.Point(520, 19);
+            this.lblsearch.Location = new System.Drawing.Point(956, 19);
             this.lblsearch.Name = "lblsearch";
             this.lblsearch.Size = new System.Drawing.Size(66, 20);
             this.lblsearch.TabIndex = 1;
@@ -100,9 +100,9 @@
             this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsearch.Location = new System.Drawing.Point(592, 19);
+            this.txtsearch.Location = new System.Drawing.Point(1028, 19);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(184, 20);
+            this.txtsearch.Size = new System.Drawing.Size(224, 20);
             this.txtsearch.TabIndex = 2;
             // 
             // dataGridView1
@@ -121,9 +121,9 @@
             this.colProduct,
             this.colDescription,
             this.colDate});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 69);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(791, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1264, 156);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -155,9 +155,9 @@
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblContact);
             this.panel1.Controls.Add(this.lblID);
-            this.panel1.Location = new System.Drawing.Point(0, 217);
+            this.panel1.Location = new System.Drawing.Point(0, 227);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1584, 232);
+            this.panel1.Size = new System.Drawing.Size(1584, 453);
             this.panel1.TabIndex = 4;
             // 
             // btnClear
@@ -165,9 +165,9 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Location = new System.Drawing.Point(261, 183);
+            this.btnClear.Location = new System.Drawing.Point(261, 376);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(862, 23);
+            this.btnClear.Size = new System.Drawing.Size(862, 51);
             this.btnClear.TabIndex = 21;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -177,9 +177,9 @@
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Location = new System.Drawing.Point(180, 183);
+            this.btnRemove.Location = new System.Drawing.Point(180, 335);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(862, 23);
+            this.btnRemove.Size = new System.Drawing.Size(862, 92);
             this.btnRemove.TabIndex = 20;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -189,9 +189,9 @@
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Location = new System.Drawing.Point(99, 183);
+            this.btnUpdate.Location = new System.Drawing.Point(99, 323);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(862, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(862, 104);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -201,9 +201,9 @@
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(18, 183);
+            this.btnAdd.Location = new System.Drawing.Point(18, 356);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(862, 23);
+            this.btnAdd.Size = new System.Drawing.Size(862, 71);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -213,9 +213,9 @@
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(594, 66);
+            this.dateTimePicker1.Location = new System.Drawing.Point(994, 117);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(987, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(224, 20);
             this.dateTimePicker1.TabIndex = 17;
             // 
             // textBox8
@@ -223,9 +223,9 @@
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(562, 35);
+            this.textBox8.Location = new System.Drawing.Point(905, 224);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(887, 20);
+            this.textBox8.Size = new System.Drawing.Size(291, 20);
             this.textBox8.TabIndex = 16;
             // 
             // textBox7
@@ -233,9 +233,9 @@
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(594, 98);
+            this.textBox7.Location = new System.Drawing.Point(895, 198);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(887, 20);
+            this.textBox7.Size = new System.Drawing.Size(255, 20);
             this.textBox7.TabIndex = 15;
             // 
             // textBox6
@@ -243,9 +243,9 @@
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(295, 98);
+            this.textBox6.Location = new System.Drawing.Point(509, 294);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(887, 20);
+            this.textBox6.Size = new System.Drawing.Size(278, 20);
             this.textBox6.TabIndex = 14;
             // 
             // textBox5
@@ -253,9 +253,9 @@
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(295, 63);
+            this.textBox5.Location = new System.Drawing.Point(905, 158);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(887, 20);
+            this.textBox5.Size = new System.Drawing.Size(331, 20);
             this.textBox5.TabIndex = 13;
             // 
             // textBox4
@@ -263,9 +263,9 @@
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(295, 32);
+            this.textBox4.Location = new System.Drawing.Point(617, 62);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(887, 20);
+            this.textBox4.Size = new System.Drawing.Size(255, 20);
             this.textBox4.TabIndex = 12;
             // 
             // txtEmail
@@ -273,9 +273,9 @@
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(56, 94);
+            this.txtEmail.Location = new System.Drawing.Point(244, 294);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(887, 20);
+            this.txtEmail.Size = new System.Drawing.Size(205, 20);
             this.txtEmail.TabIndex = 11;
             // 
             // txtContact
@@ -283,9 +283,10 @@
             this.txtContact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContact.Location = new System.Drawing.Point(56, 63);
+            this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.Location = new System.Drawing.Point(74, 69);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(887, 20);
+            this.txtContact.Size = new System.Drawing.Size(205, 26);
             this.txtContact.TabIndex = 10;
             // 
             // txtID
@@ -293,9 +294,9 @@
             this.txtID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtID.Location = new System.Drawing.Point(57, 35);
+            this.txtID.Location = new System.Drawing.Point(257, 254);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(887, 20);
+            this.txtID.Size = new System.Drawing.Size(204, 20);
             this.txtID.TabIndex = 9;
             // 
             // lblDescripntion
@@ -316,9 +317,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(521, 66);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(72, 13);
+            this.lblDate.Size = new System.Drawing.Size(90, 16);
             this.lblDate.TabIndex = 7;
             this.lblDate.Text = "Register Date";
             // 
@@ -376,9 +378,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(15, 101);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(27, 198);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.Size = new System.Drawing.Size(41, 16);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
@@ -388,9 +391,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(15, 66);
+            this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.Location = new System.Drawing.Point(27, 133);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(44, 13);
+            this.lblContact.Size = new System.Drawing.Size(52, 16);
             this.lblContact.TabIndex = 1;
             this.lblContact.Text = "Contact";
             // 
@@ -400,9 +404,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(15, 35);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(15, 69);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(16, 13);
+            this.lblID.Size = new System.Drawing.Size(18, 16);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "Id";
             this.lblID.Click += new System.EventHandler(this.label1_Click_1);
