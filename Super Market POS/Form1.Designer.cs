@@ -50,10 +50,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(623, 111);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(594, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 42);
+            this.label2.Size = new System.Drawing.Size(159, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "User Type";
             // 
