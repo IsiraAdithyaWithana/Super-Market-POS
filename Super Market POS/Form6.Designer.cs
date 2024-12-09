@@ -47,15 +47,21 @@
             this.invoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
+            this.previousbillstxt = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.namecredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newbalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creditstxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.previousbillstxt);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.chequenotxt);
             this.panel1.Controls.Add(this.banktxt);
@@ -71,9 +77,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(700, 1);
+            this.panel1.Location = new System.Drawing.Point(694, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(559, 678);
+            this.panel1.Size = new System.Drawing.Size(569, 678);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -215,7 +221,7 @@
             this.invoiceno,
             this.date1,
             this.balance1});
-            this.dataGridView1.Location = new System.Drawing.Point(200, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(125, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(341, 302);
             this.dataGridView1.TabIndex = 15;
@@ -238,21 +244,64 @@
             this.balance1.Name = "balance1";
             this.balance1.ReadOnly = true;
             // 
-            // label7
+            // previousbillstxt
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(439, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Previous Bills";
+            this.previousbillstxt.AutoSize = true;
+            this.previousbillstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previousbillstxt.Location = new System.Drawing.Point(419, 24);
+            this.previousbillstxt.Name = "previousbillstxt";
+            this.previousbillstxt.Size = new System.Drawing.Size(102, 16);
+            this.previousbillstxt.TabIndex = 16;
+            this.previousbillstxt.Text = "Previous Bills";
+            this.previousbillstxt.Click += new System.EventHandler(this.previousbillstxt_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.namecredit,
+            this.contact,
+            this.newbalance});
+            this.dataGridView2.Location = new System.Drawing.Point(0, 45);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(694, 634);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // namecredit
+            // 
+            this.namecredit.HeaderText = "Name";
+            this.namecredit.Name = "namecredit";
+            this.namecredit.Width = 250;
+            // 
+            // contact
+            // 
+            this.contact.HeaderText = "Contact";
+            this.contact.Name = "contact";
+            this.contact.Width = 200;
+            // 
+            // newbalance
+            // 
+            this.newbalance.HeaderText = "New Balance";
+            this.newbalance.Name = "newbalance";
+            this.newbalance.Width = 200;
+            // 
+            // creditstxt
+            // 
+            this.creditstxt.AutoSize = true;
+            this.creditstxt.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditstxt.Location = new System.Drawing.Point(21, 1);
+            this.creditstxt.Name = "creditstxt";
+            this.creditstxt.Size = new System.Drawing.Size(120, 39);
+            this.creditstxt.TabIndex = 17;
+            this.creditstxt.Text = "Credits";
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.creditstxt);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel1);
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -260,7 +309,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,6 +336,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceno;
         private System.Windows.Forms.DataGridViewTextBoxColumn date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn balance1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label previousbillstxt;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namecredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn newbalance;
+        private System.Windows.Forms.Label creditstxt;
     }
 }

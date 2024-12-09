@@ -26,5 +26,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void previousbillstxt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
