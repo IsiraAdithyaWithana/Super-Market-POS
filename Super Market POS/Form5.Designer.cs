@@ -89,7 +89,7 @@
             // 
             this.lblcus.AutoSize = true;
             this.lblcus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcus.Location = new System.Drawing.Point(52, 42);
+            this.lblcus.Location = new System.Drawing.Point(55, 18);
             this.lblcus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcus.Name = "lblcus";
             this.lblcus.Size = new System.Drawing.Size(201, 46);
@@ -121,9 +121,9 @@
             this.panel1.Controls.Add(this.lblAdd);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lblId);
-            this.panel1.Location = new System.Drawing.Point(41, 423);
+            this.panel1.Location = new System.Drawing.Point(44, 399);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1167, 286);
+            this.panel1.Size = new System.Drawing.Size(1167, 262);
             this.panel1.TabIndex = 14;
             // 
             // btnCle
@@ -332,7 +332,7 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(44, 131);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -406,7 +406,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcus);
