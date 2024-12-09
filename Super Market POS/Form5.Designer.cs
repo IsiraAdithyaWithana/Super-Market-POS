@@ -70,9 +70,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(963, 53);
+            this.textBox1.Location = new System.Drawing.Point(952, 50);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 22);
+            this.textBox1.Size = new System.Drawing.Size(281, 22);
             this.textBox1.TabIndex = 17;
             // 
             // label1
@@ -89,7 +89,7 @@
             // 
             this.lblcus.AutoSize = true;
             this.lblcus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcus.Location = new System.Drawing.Point(55, 18);
+            this.lblcus.Location = new System.Drawing.Point(33, 29);
             this.lblcus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcus.Name = "lblcus";
             this.lblcus.Size = new System.Drawing.Size(201, 46);
@@ -98,7 +98,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.btnCle);
             this.panel1.Controls.Add(this.btnRem);
             this.panel1.Controls.Add(this.btnUp);
@@ -121,9 +121,9 @@
             this.panel1.Controls.Add(this.lblAdd);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lblId);
-            this.panel1.Location = new System.Drawing.Point(44, 399);
+            this.panel1.Location = new System.Drawing.Point(22, 399);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1167, 262);
+            this.panel1.Size = new System.Drawing.Size(1211, 262);
             this.panel1.TabIndex = 14;
             // 
             // btnCle
@@ -196,14 +196,14 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(476, 75);
+            this.textBox6.Location = new System.Drawing.Point(489, 72);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(269, 22);
             this.textBox6.TabIndex = 13;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(476, 34);
+            this.textBox5.Location = new System.Drawing.Point(489, 34);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(269, 22);
             this.textBox5.TabIndex = 12;
@@ -332,12 +332,13 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(44, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1167, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(1211, 286);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
