@@ -43,12 +43,20 @@
             this.balancetxt = new System.Windows.Forms.TextBox();
             this.banktxt = new System.Windows.Forms.TextBox();
             this.chequenotxt = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.invoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.chequenotxt);
             this.panel1.Controls.Add(this.banktxt);
             this.panel1.Controls.Add(this.balancetxt);
@@ -63,16 +71,16 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(700, 5);
+            this.panel1.Location = new System.Drawing.Point(700, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(559, 670);
+            this.panel1.Size = new System.Drawing.Size(559, 678);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 379);
+            this.label1.Location = new System.Drawing.Point(78, 371);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 16);
             this.label1.TabIndex = 0;
@@ -154,45 +162,91 @@
             // 
             // dtpchequerealizeddate
             // 
-            this.dtpchequerealizeddate.Location = new System.Drawing.Point(311, 379);
+            this.dtpchequerealizeddate.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpchequerealizeddate.Location = new System.Drawing.Point(311, 363);
             this.dtpchequerealizeddate.Name = "dtpchequerealizeddate";
-            this.dtpchequerealizeddate.Size = new System.Drawing.Size(195, 20);
+            this.dtpchequerealizeddate.Size = new System.Drawing.Size(195, 27);
             this.dtpchequerealizeddate.TabIndex = 9;
             // 
             // fulltotaltxt
             // 
-            this.fulltotaltxt.Location = new System.Drawing.Point(311, 410);
+            this.fulltotaltxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fulltotaltxt.Location = new System.Drawing.Point(311, 399);
             this.fulltotaltxt.Name = "fulltotaltxt";
-            this.fulltotaltxt.Size = new System.Drawing.Size(195, 20);
+            this.fulltotaltxt.Size = new System.Drawing.Size(195, 27);
             this.fulltotaltxt.TabIndex = 10;
             // 
             // paidtxt
             // 
-            this.paidtxt.Location = new System.Drawing.Point(311, 440);
+            this.paidtxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paidtxt.Location = new System.Drawing.Point(311, 434);
             this.paidtxt.Name = "paidtxt";
-            this.paidtxt.Size = new System.Drawing.Size(195, 20);
+            this.paidtxt.Size = new System.Drawing.Size(195, 27);
             this.paidtxt.TabIndex = 11;
             // 
             // balancetxt
             // 
-            this.balancetxt.Location = new System.Drawing.Point(311, 475);
+            this.balancetxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balancetxt.Location = new System.Drawing.Point(311, 467);
             this.balancetxt.Name = "balancetxt";
-            this.balancetxt.Size = new System.Drawing.Size(195, 20);
+            this.balancetxt.Size = new System.Drawing.Size(195, 27);
             this.balancetxt.TabIndex = 12;
             // 
             // banktxt
             // 
-            this.banktxt.Location = new System.Drawing.Point(311, 545);
+            this.banktxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.banktxt.Location = new System.Drawing.Point(311, 534);
             this.banktxt.Name = "banktxt";
-            this.banktxt.Size = new System.Drawing.Size(195, 20);
+            this.banktxt.Size = new System.Drawing.Size(195, 27);
             this.banktxt.TabIndex = 13;
             // 
             // chequenotxt
             // 
-            this.chequenotxt.Location = new System.Drawing.Point(311, 510);
+            this.chequenotxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chequenotxt.Location = new System.Drawing.Point(311, 500);
             this.chequenotxt.Name = "chequenotxt";
-            this.chequenotxt.Size = new System.Drawing.Size(195, 20);
+            this.chequenotxt.Size = new System.Drawing.Size(195, 27);
             this.chequenotxt.TabIndex = 14;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.invoiceno,
+            this.date1,
+            this.balance1});
+            this.dataGridView1.Location = new System.Drawing.Point(200, 43);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(341, 302);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // invoiceno
+            // 
+            this.invoiceno.HeaderText = "Invoice No";
+            this.invoiceno.Name = "invoiceno";
+            this.invoiceno.ReadOnly = true;
+            // 
+            // date1
+            // 
+            this.date1.HeaderText = "Date";
+            this.date1.Name = "date1";
+            this.date1.ReadOnly = true;
+            // 
+            // balance1
+            // 
+            this.balance1.HeaderText = "Balance";
+            this.balance1.Name = "balance1";
+            this.balance1.ReadOnly = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(439, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Previous Bills";
             // 
             // Form6
             // 
@@ -205,6 +259,7 @@
             this.Text = "Form6";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +281,10 @@
         private System.Windows.Forms.TextBox chequenotxt;
         private System.Windows.Forms.TextBox banktxt;
         private System.Windows.Forms.TextBox balancetxt;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn balance1;
+        private System.Windows.Forms.Label label7;
     }
 }
