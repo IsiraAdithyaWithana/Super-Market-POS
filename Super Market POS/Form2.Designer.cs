@@ -70,9 +70,9 @@
             this.colEXP,
             this.colReOrder,
             this.colRack});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1543, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(1240, 369);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -188,7 +188,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Stock";
             // 
-            // Form10
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,7 +196,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form10";
+            this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form10_Load);
