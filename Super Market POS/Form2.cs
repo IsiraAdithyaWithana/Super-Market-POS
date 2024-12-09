@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Super_Market_POS
 {
-    public partial class Form10 : Form
+    public partial class Form2 : Form
     {
-        public Form10()
+        public Form2()
         {
             InitializeComponent();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form10_Load(object sender, EventArgs e)
         {
 
         }

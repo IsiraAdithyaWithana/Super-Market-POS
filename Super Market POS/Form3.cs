@@ -31,5 +31,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
