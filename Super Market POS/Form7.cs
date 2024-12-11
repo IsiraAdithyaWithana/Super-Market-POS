@@ -16,5 +16,10 @@ namespace Super_Market_POS
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

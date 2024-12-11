@@ -31,5 +31,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void creditstxt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

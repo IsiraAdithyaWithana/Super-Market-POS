@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dtpchequerealizeddate = new System.Windows.Forms.DateTimePicker();
-            this.fulltotaltxt = new System.Windows.Forms.TextBox();
-            this.paidtxt = new System.Windows.Forms.TextBox();
-            this.balancetxt = new System.Windows.Forms.TextBox();
-            this.banktxt = new System.Windows.Forms.TextBox();
-            this.chequenotxt = new System.Windows.Forms.TextBox();
+            this.previousbillstxt = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.invoiceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.balance1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.previousbillstxt = new System.Windows.Forms.Label();
+            this.chequenotxt = new System.Windows.Forms.TextBox();
+            this.banktxt = new System.Windows.Forms.TextBox();
+            this.balancetxt = new System.Windows.Forms.TextBox();
+            this.paidtxt = new System.Windows.Forms.TextBox();
+            this.fulltotaltxt = new System.Windows.Forms.TextBox();
+            this.dtpchequerealizeddate = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.namecredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,137 +82,16 @@
             this.panel1.Size = new System.Drawing.Size(569, 678);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // previousbillstxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 371);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cheque Realized Date";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 410);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Full Total";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(78, 440);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Paid";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(78, 475);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Balance";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(78, 514);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Cheque No";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(78, 545);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Bank";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(311, 620);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 25);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Paid";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(51, 620);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 25);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Print Credits";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // dtpchequerealizeddate
-            // 
-            this.dtpchequerealizeddate.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpchequerealizeddate.Location = new System.Drawing.Point(311, 363);
-            this.dtpchequerealizeddate.Name = "dtpchequerealizeddate";
-            this.dtpchequerealizeddate.Size = new System.Drawing.Size(195, 27);
-            this.dtpchequerealizeddate.TabIndex = 9;
-            // 
-            // fulltotaltxt
-            // 
-            this.fulltotaltxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fulltotaltxt.Location = new System.Drawing.Point(311, 399);
-            this.fulltotaltxt.Name = "fulltotaltxt";
-            this.fulltotaltxt.Size = new System.Drawing.Size(195, 27);
-            this.fulltotaltxt.TabIndex = 10;
-            // 
-            // paidtxt
-            // 
-            this.paidtxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paidtxt.Location = new System.Drawing.Point(311, 434);
-            this.paidtxt.Name = "paidtxt";
-            this.paidtxt.Size = new System.Drawing.Size(195, 27);
-            this.paidtxt.TabIndex = 11;
-            // 
-            // balancetxt
-            // 
-            this.balancetxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.balancetxt.Location = new System.Drawing.Point(311, 467);
-            this.balancetxt.Name = "balancetxt";
-            this.balancetxt.Size = new System.Drawing.Size(195, 27);
-            this.balancetxt.TabIndex = 12;
-            // 
-            // banktxt
-            // 
-            this.banktxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.banktxt.Location = new System.Drawing.Point(311, 534);
-            this.banktxt.Name = "banktxt";
-            this.banktxt.Size = new System.Drawing.Size(195, 27);
-            this.banktxt.TabIndex = 13;
-            // 
-            // chequenotxt
-            // 
-            this.chequenotxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chequenotxt.Location = new System.Drawing.Point(311, 500);
-            this.chequenotxt.Name = "chequenotxt";
-            this.chequenotxt.Size = new System.Drawing.Size(195, 27);
-            this.chequenotxt.TabIndex = 14;
+            this.previousbillstxt.AutoSize = true;
+            this.previousbillstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previousbillstxt.Location = new System.Drawing.Point(419, 24);
+            this.previousbillstxt.Name = "previousbillstxt";
+            this.previousbillstxt.Size = new System.Drawing.Size(102, 16);
+            this.previousbillstxt.TabIndex = 16;
+            this.previousbillstxt.Text = "Previous Bills";
+            this.previousbillstxt.Click += new System.EventHandler(this.previousbillstxt_Click);
             // 
             // dataGridView1
             // 
@@ -244,16 +123,137 @@
             this.balance1.Name = "balance1";
             this.balance1.ReadOnly = true;
             // 
-            // previousbillstxt
+            // chequenotxt
             // 
-            this.previousbillstxt.AutoSize = true;
-            this.previousbillstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previousbillstxt.Location = new System.Drawing.Point(419, 24);
-            this.previousbillstxt.Name = "previousbillstxt";
-            this.previousbillstxt.Size = new System.Drawing.Size(102, 16);
-            this.previousbillstxt.TabIndex = 16;
-            this.previousbillstxt.Text = "Previous Bills";
-            this.previousbillstxt.Click += new System.EventHandler(this.previousbillstxt_Click);
+            this.chequenotxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chequenotxt.Location = new System.Drawing.Point(311, 500);
+            this.chequenotxt.Name = "chequenotxt";
+            this.chequenotxt.Size = new System.Drawing.Size(195, 27);
+            this.chequenotxt.TabIndex = 14;
+            // 
+            // banktxt
+            // 
+            this.banktxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.banktxt.Location = new System.Drawing.Point(311, 534);
+            this.banktxt.Name = "banktxt";
+            this.banktxt.Size = new System.Drawing.Size(195, 27);
+            this.banktxt.TabIndex = 13;
+            // 
+            // balancetxt
+            // 
+            this.balancetxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balancetxt.Location = new System.Drawing.Point(311, 467);
+            this.balancetxt.Name = "balancetxt";
+            this.balancetxt.Size = new System.Drawing.Size(195, 27);
+            this.balancetxt.TabIndex = 12;
+            // 
+            // paidtxt
+            // 
+            this.paidtxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paidtxt.Location = new System.Drawing.Point(311, 434);
+            this.paidtxt.Name = "paidtxt";
+            this.paidtxt.Size = new System.Drawing.Size(195, 27);
+            this.paidtxt.TabIndex = 11;
+            // 
+            // fulltotaltxt
+            // 
+            this.fulltotaltxt.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fulltotaltxt.Location = new System.Drawing.Point(311, 399);
+            this.fulltotaltxt.Name = "fulltotaltxt";
+            this.fulltotaltxt.Size = new System.Drawing.Size(195, 27);
+            this.fulltotaltxt.TabIndex = 10;
+            // 
+            // dtpchequerealizeddate
+            // 
+            this.dtpchequerealizeddate.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpchequerealizeddate.Location = new System.Drawing.Point(311, 363);
+            this.dtpchequerealizeddate.Name = "dtpchequerealizeddate";
+            this.dtpchequerealizeddate.Size = new System.Drawing.Size(195, 27);
+            this.dtpchequerealizeddate.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(51, 620);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 25);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Print Credits";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(311, 620);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(230, 25);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Paid";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(78, 545);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Bank";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(78, 514);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Cheque No";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(78, 475);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Balance";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(78, 440);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Paid";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 410);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Full Total";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 371);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cheque Realized Date";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView2
             // 
@@ -294,6 +294,7 @@
             this.creditstxt.Size = new System.Drawing.Size(120, 39);
             this.creditstxt.TabIndex = 17;
             this.creditstxt.Text = "Credits";
+            this.creditstxt.Click += new System.EventHandler(this.creditstxt_Click);
             // 
             // Form6
             // 
