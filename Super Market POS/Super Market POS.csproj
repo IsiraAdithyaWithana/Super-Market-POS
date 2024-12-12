@@ -221,5 +221,8 @@
   <ItemGroup>
     <None Include="Resources\delete button 2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return bill btn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
