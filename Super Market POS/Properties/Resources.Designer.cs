@@ -103,6 +103,16 @@ namespace Super_Market_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Item_return_btn_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Item_return_btn-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nsbm {
             get {
                 object obj = ResourceManager.GetObject("nsbm", resourceCulture);
@@ -113,9 +123,39 @@ namespace Super_Market_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Remove_item__btn_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Remove_item__btn-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Return_bill_btn {
             get {
                 object obj = ResourceManager.GetObject("Return bill btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Return_bill_btn_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Return_bill_btn-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Return_bill_btn_removebg_preview__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Return_bill_btn-removebg-preview (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

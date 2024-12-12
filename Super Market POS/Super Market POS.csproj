@@ -224,5 +224,17 @@
   <ItemGroup>
     <None Include="Resources\Return bill btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return_bill_btn-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Item_return_btn-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return_bill_btn-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_item__btn-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
