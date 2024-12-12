@@ -41,5 +41,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
