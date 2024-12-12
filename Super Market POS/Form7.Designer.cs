@@ -32,16 +32,16 @@
             this.Invoicenotxt = new System.Windows.Forms.TextBox();
             this.Invoicelbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Codelbl = new System.Windows.Forms.Label();
-            this.Namelbl = new System.Windows.Forms.Label();
-            this.Qtylbl = new System.Windows.Forms.Label();
-            this.Pricelbl = new System.Windows.Forms.Label();
-            this.Codetxt = new System.Windows.Forms.TextBox();
-            this.Nametxt = new System.Windows.Forms.TextBox();
-            this.Qtytxt = new System.Windows.Forms.TextBox();
-            this.Pricetxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Pricetxt = new System.Windows.Forms.TextBox();
+            this.Qtytxt = new System.Windows.Forms.TextBox();
+            this.Nametxt = new System.Windows.Forms.TextBox();
+            this.Codetxt = new System.Windows.Forms.TextBox();
+            this.Pricelbl = new System.Windows.Forms.Label();
+            this.Qtylbl = new System.Windows.Forms.Label();
+            this.Namelbl = new System.Windows.Forms.Label();
+            this.Codelbl = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +50,23 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Totallbl = new System.Windows.Forms.Label();
             this.Totaltxt = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +120,95 @@
             this.panel1.Size = new System.Drawing.Size(694, 498);
             this.panel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(306, 435);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // Pricetxt
+            // 
+            this.Pricetxt.BackColor = System.Drawing.SystemColors.Window;
+            this.Pricetxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pricetxt.Location = new System.Drawing.Point(433, 362);
+            this.Pricetxt.Name = "Pricetxt";
+            this.Pricetxt.Size = new System.Drawing.Size(196, 33);
+            this.Pricetxt.TabIndex = 5;
+            // 
+            // Qtytxt
+            // 
+            this.Qtytxt.BackColor = System.Drawing.SystemColors.Window;
+            this.Qtytxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Qtytxt.Location = new System.Drawing.Point(433, 292);
+            this.Qtytxt.Name = "Qtytxt";
+            this.Qtytxt.Size = new System.Drawing.Size(196, 33);
+            this.Qtytxt.TabIndex = 7;
+            // 
+            // Nametxt
+            // 
+            this.Nametxt.BackColor = System.Drawing.SystemColors.Window;
+            this.Nametxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nametxt.Location = new System.Drawing.Point(101, 362);
+            this.Nametxt.Name = "Nametxt";
+            this.Nametxt.Size = new System.Drawing.Size(196, 33);
+            this.Nametxt.TabIndex = 6;
+            // 
+            // Codetxt
+            // 
+            this.Codetxt.BackColor = System.Drawing.SystemColors.Window;
+            this.Codetxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codetxt.Location = new System.Drawing.Point(101, 292);
+            this.Codetxt.Name = "Codetxt";
+            this.Codetxt.Size = new System.Drawing.Size(196, 33);
+            this.Codetxt.TabIndex = 4;
+            // 
+            // Pricelbl
+            // 
+            this.Pricelbl.AutoSize = true;
+            this.Pricelbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pricelbl.Location = new System.Drawing.Point(368, 369);
+            this.Pricelbl.Name = "Pricelbl";
+            this.Pricelbl.Size = new System.Drawing.Size(59, 26);
+            this.Pricelbl.TabIndex = 5;
+            this.Pricelbl.Text = "Price";
+            // 
+            // Qtylbl
+            // 
+            this.Qtylbl.AutoSize = true;
+            this.Qtylbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Qtylbl.Location = new System.Drawing.Point(368, 295);
+            this.Qtylbl.Name = "Qtylbl";
+            this.Qtylbl.Size = new System.Drawing.Size(47, 26);
+            this.Qtylbl.TabIndex = 4;
+            this.Qtylbl.Text = "Qty";
+            // 
+            // Namelbl
+            // 
+            this.Namelbl.AutoSize = true;
+            this.Namelbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Namelbl.Location = new System.Drawing.Point(19, 369);
+            this.Namelbl.Name = "Namelbl";
+            this.Namelbl.Size = new System.Drawing.Size(69, 26);
+            this.Namelbl.TabIndex = 4;
+            this.Namelbl.Text = "Name";
+            // 
+            // Codelbl
+            // 
+            this.Codelbl.AutoSize = true;
+            this.Codelbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codelbl.Location = new System.Drawing.Point(19, 295);
+            this.Codelbl.Name = "Codelbl";
+            this.Codelbl.Size = new System.Drawing.Size(61, 26);
+            this.Codelbl.TabIndex = 3;
+            this.Codelbl.Text = "Code";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -120,95 +223,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(688, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Codelbl
-            // 
-            this.Codelbl.AutoSize = true;
-            this.Codelbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codelbl.Location = new System.Drawing.Point(19, 295);
-            this.Codelbl.Name = "Codelbl";
-            this.Codelbl.Size = new System.Drawing.Size(61, 26);
-            this.Codelbl.TabIndex = 3;
-            this.Codelbl.Text = "Code";
-            // 
-            // Namelbl
-            // 
-            this.Namelbl.AutoSize = true;
-            this.Namelbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Namelbl.Location = new System.Drawing.Point(19, 369);
-            this.Namelbl.Name = "Namelbl";
-            this.Namelbl.Size = new System.Drawing.Size(69, 26);
-            this.Namelbl.TabIndex = 4;
-            this.Namelbl.Text = "Name";
-            // 
-            // Qtylbl
-            // 
-            this.Qtylbl.AutoSize = true;
-            this.Qtylbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qtylbl.Location = new System.Drawing.Point(368, 295);
-            this.Qtylbl.Name = "Qtylbl";
-            this.Qtylbl.Size = new System.Drawing.Size(47, 26);
-            this.Qtylbl.TabIndex = 4;
-            this.Qtylbl.Text = "Qty";
-            // 
-            // Pricelbl
-            // 
-            this.Pricelbl.AutoSize = true;
-            this.Pricelbl.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pricelbl.Location = new System.Drawing.Point(368, 369);
-            this.Pricelbl.Name = "Pricelbl";
-            this.Pricelbl.Size = new System.Drawing.Size(59, 26);
-            this.Pricelbl.TabIndex = 5;
-            this.Pricelbl.Text = "Price";
-            // 
-            // Codetxt
-            // 
-            this.Codetxt.BackColor = System.Drawing.SystemColors.Window;
-            this.Codetxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codetxt.Location = new System.Drawing.Point(101, 292);
-            this.Codetxt.Name = "Codetxt";
-            this.Codetxt.Size = new System.Drawing.Size(196, 33);
-            this.Codetxt.TabIndex = 4;
-            // 
-            // Nametxt
-            // 
-            this.Nametxt.BackColor = System.Drawing.SystemColors.Window;
-            this.Nametxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nametxt.Location = new System.Drawing.Point(101, 362);
-            this.Nametxt.Name = "Nametxt";
-            this.Nametxt.Size = new System.Drawing.Size(196, 33);
-            this.Nametxt.TabIndex = 6;
-            // 
-            // Qtytxt
-            // 
-            this.Qtytxt.BackColor = System.Drawing.SystemColors.Window;
-            this.Qtytxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Qtytxt.Location = new System.Drawing.Point(433, 292);
-            this.Qtytxt.Name = "Qtytxt";
-            this.Qtytxt.Size = new System.Drawing.Size(196, 33);
-            this.Qtytxt.TabIndex = 7;
-            // 
-            // Pricetxt
-            // 
-            this.Pricetxt.BackColor = System.Drawing.SystemColors.Window;
-            this.Pricetxt.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pricetxt.Location = new System.Drawing.Point(433, 362);
-            this.Pricetxt.Name = "Pricetxt";
-            this.Pricetxt.Size = new System.Drawing.Size(196, 33);
-            this.Pricetxt.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(306, 435);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Column1
             // 
@@ -265,6 +279,96 @@
             this.Totaltxt.Size = new System.Drawing.Size(196, 33);
             this.Totaltxt.TabIndex = 5;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12});
+            this.dataGridView2.Location = new System.Drawing.Point(3, 14);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(534, 150);
+            this.dataGridView2.TabIndex = 7;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column7.Frozen = true;
+            this.Column7.HeaderText = "Code";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.Frozen = true;
+            this.Column8.HeaderText = "Name";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "Price";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "Qty";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column11.HeaderText = "Type";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.HeaderText = "Amount";
+            this.Column12.Name = "Column12";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Location = new System.Drawing.Point(12, 104);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(539, 406);
+            this.panel2.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(230, 522);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 26);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Total Rs.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(340, 519);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 33);
+            this.textBox1.TabIndex = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Super_Market_POS.Properties.Resources.Return_bill_btn;
+            this.pictureBox2.Location = new System.Drawing.Point(210, 605);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(130, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Super_Market_POS.Properties.Resources.delete_button_2;
@@ -282,6 +386,10 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Totaltxt);
             this.Controls.Add(this.Totallbl);
@@ -295,6 +403,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,5 +437,16 @@
         private System.Windows.Forms.Label Totallbl;
         private System.Windows.Forms.TextBox Totaltxt;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
