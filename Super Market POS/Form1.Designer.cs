@@ -39,11 +39,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(586, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 79);
+            this.label1.Size = new System.Drawing.Size(274, 79);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sing In";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -69,18 +69,16 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownWidth = 650;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.AccessibleName = "GGG";
+            this.comboBox1.DisplayMember = "CASHIER";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 73;
             this.comboBox1.Items.AddRange(new object[] {
-            "Admin",
-            "Cashier"});
-            this.comboBox1.Location = new System.Drawing.Point(668, 204);
+            "ADMIN",
+            "CASHIER"});
+            this.comboBox1.Location = new System.Drawing.Point(667, 211);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(452, 81);
+            this.comboBox1.Size = new System.Drawing.Size(350, 21);
             this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
