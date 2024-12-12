@@ -71,7 +71,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(735, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(482, 20);
             this.textBox1.TabIndex = 17;
@@ -122,52 +122,52 @@
             this.panel1.Controls.Add(this.lblAdd);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lblId);
-            this.panel1.Location = new System.Drawing.Point(37, 330);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(-2, 330);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1178, 307);
+            this.panel1.Size = new System.Drawing.Size(1265, 340);
             this.panel1.TabIndex = 14;
             // 
             // btnCle
             // 
-            this.btnCle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCle.Location = new System.Drawing.Point(298, 169);
-            this.btnCle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCle.Location = new System.Drawing.Point(306, 149);
+            this.btnCle.Margin = new System.Windows.Forms.Padding(2);
             this.btnCle.Name = "btnCle";
-            this.btnCle.Size = new System.Drawing.Size(71, 33);
+            this.btnCle.Size = new System.Drawing.Size(82, 33);
             this.btnCle.TabIndex = 22;
             this.btnCle.Text = "Clear";
             this.btnCle.UseVisualStyleBackColor = true;
             // 
             // btnRem
             // 
-            this.btnRem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRem.Location = new System.Drawing.Point(206, 169);
-            this.btnRem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRem.Location = new System.Drawing.Point(214, 149);
+            this.btnRem.Margin = new System.Windows.Forms.Padding(2);
             this.btnRem.Name = "btnRem";
-            this.btnRem.Size = new System.Drawing.Size(71, 33);
+            this.btnRem.Size = new System.Drawing.Size(82, 33);
             this.btnRem.TabIndex = 21;
             this.btnRem.Text = "Remove";
             this.btnRem.UseVisualStyleBackColor = true;
             // 
             // btnUp
             // 
-            this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(110, 169);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.Location = new System.Drawing.Point(118, 149);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(71, 33);
+            this.btnUp.Size = new System.Drawing.Size(82, 33);
             this.btnUp.TabIndex = 20;
             this.btnUp.Text = "Update";
             this.btnUp.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(14, 169);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(22, 149);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(71, 33);
+            this.btnAdd.Size = new System.Drawing.Size(82, 33);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -175,7 +175,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(667, 58);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(188, 20);
             this.dateTimePicker1.TabIndex = 18;
@@ -183,7 +183,7 @@
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(652, 95);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(203, 20);
             this.textBox10.TabIndex = 17;
@@ -191,7 +191,7 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(652, 28);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(203, 20);
             this.textBox8.TabIndex = 15;
@@ -199,7 +199,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(388, 95);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(182, 20);
             this.textBox7.TabIndex = 14;
@@ -207,7 +207,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(367, 58);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(203, 20);
             this.textBox6.TabIndex = 13;
@@ -215,7 +215,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(367, 28);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(203, 20);
             this.textBox5.TabIndex = 12;
@@ -223,7 +223,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(90, 95);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(203, 20);
             this.textBox4.TabIndex = 11;
@@ -231,7 +231,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(90, 60);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(203, 20);
             this.textBox3.TabIndex = 10;
@@ -327,7 +327,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(90, 28);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(203, 20);
             this.textBox2.TabIndex = 1;
@@ -356,12 +356,12 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(37, 93);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 73);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1178, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(1263, 257);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -370,14 +370,15 @@
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 135;
             // 
             // Column2
             // 
+            this.Column2.FillWeight = 150F;
             this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
+            this.Column2.Width = 150;
             // 
             // Column3
             // 
@@ -391,7 +392,7 @@
             this.Column4.HeaderText = "Address";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
+            this.Column4.Width = 175;
             // 
             // Column5
             // 
