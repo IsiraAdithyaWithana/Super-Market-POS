@@ -66,9 +66,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::Super_Market_POS.Properties.Resources.nsbm;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 105);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 157);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(504, 517);
+            this.pictureBox1.Size = new System.Drawing.Size(430, 427);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
