@@ -16,5 +16,10 @@ namespace Super_Market_POS
         {
             InitializeComponent();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
