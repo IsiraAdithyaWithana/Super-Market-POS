@@ -26,5 +26,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
