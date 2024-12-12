@@ -36,6 +36,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "ADMIN",
             "CASHIER"});
-            this.comboBox1.Location = new System.Drawing.Point(674, 208);
+            this.comboBox1.Location = new System.Drawing.Point(674, 207);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(350, 28);
             this.comboBox1.TabIndex = 3;
@@ -98,7 +99,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(674, 362);
+            this.textBox1.Location = new System.Drawing.Point(674, 370);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(350, 26);
             this.textBox1.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(601, 489);
+            this.label4.Location = new System.Drawing.Point(594, 476);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 39);
             this.label4.TabIndex = 6;
@@ -118,12 +119,21 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(674, 541);
+            this.textBox2.Location = new System.Drawing.Point(674, 530);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(350, 26);
             this.textBox2.TabIndex = 7;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(601, 608);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(436, 61);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -131,6 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
@@ -158,6 +169,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
