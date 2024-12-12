@@ -60,12 +60,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -359,24 +361,34 @@
             this.textBox1.Size = new System.Drawing.Size(196, 33);
             this.textBox1.TabIndex = 10;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Super_Market_POS.Properties.Resources.Item_return_btn_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(448, 577);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(260, 92);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Super_Market_POS.Properties.Resources.Return_bill_btn;
-            this.pictureBox2.Location = new System.Drawing.Point(210, 605);
+            this.pictureBox2.Image = global::Super_Market_POS.Properties.Resources.Return_bill_btn_removebg_preview__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(158, 577);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(260, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Super_Market_POS.Properties.Resources.delete_button_2;
-            this.pictureBox1.Location = new System.Drawing.Point(1149, 592);
+            this.pictureBox1.Image = global::Super_Market_POS.Properties.Resources.Remove_item__btn_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(989, 577);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.Size = new System.Drawing.Size(260, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // Form7
@@ -386,11 +398,12 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Totaltxt);
             this.Controls.Add(this.Totallbl);
             this.Controls.Add(this.panel1);
@@ -405,6 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -436,7 +450,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label Totallbl;
         private System.Windows.Forms.TextBox Totaltxt;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
@@ -448,5 +461,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
