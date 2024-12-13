@@ -71,7 +71,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page2;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 133);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 369);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(127, 112);
             this.pictureBox3.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 251);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 133);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(262, 112);
             this.pictureBox2.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(11, 369);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 251);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(262, 112);
             this.pictureBox4.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(279, 133);
+            this.pictureBox6.Location = new System.Drawing.Point(492, 133);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(207, 112);
             this.pictureBox6.TabIndex = 7;
@@ -132,7 +132,7 @@
             // 
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(492, 133);
+            this.pictureBox8.Location = new System.Drawing.Point(279, 133);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(207, 112);
             this.pictureBox8.TabIndex = 9;
