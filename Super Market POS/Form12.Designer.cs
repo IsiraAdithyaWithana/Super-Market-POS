@@ -59,6 +59,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(11, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(262, 112);
@@ -67,6 +69,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page2;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(11, 133);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(127, 112);
@@ -92,6 +96,8 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox5.Location = new System.Drawing.Point(279, 15);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(207, 112);
@@ -108,6 +114,8 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page4;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox7.Location = new System.Drawing.Point(492, 15);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(207, 112);
