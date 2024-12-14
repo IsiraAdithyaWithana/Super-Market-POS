@@ -384,9 +384,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Super_Market_POS.Properties.Resources.delete_button_2;
-            this.pictureBox4.Location = new System.Drawing.Point(1130, 589);
+            this.pictureBox4.Location = new System.Drawing.Point(1149, 589);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(103, 80);
+            this.pictureBox4.Size = new System.Drawing.Size(84, 80);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
