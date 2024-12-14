@@ -21,5 +21,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
