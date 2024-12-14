@@ -540,6 +540,7 @@
             // 
             // Form7
             // 
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1546, 896);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
