@@ -69,6 +69,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
@@ -80,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -87,7 +90,7 @@
             this.button2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1083, 247);
+            this.button2.Location = new System.Drawing.Point(992, 195);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(412, 112);
@@ -505,14 +508,35 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Red;
+            this.panel3.Controls.Add(this.label30);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1547, 50);
             this.panel3.TabIndex = 127;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(433, 744);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(397, 22);
+            this.textBox2.TabIndex = 0;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(506, 9);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(523, 29);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Close Day - Cash Drawer Closing Amount";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
+            // 
             // Form7
             // 
             this.ClientSize = new System.Drawing.Size(1546, 896);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label29);
@@ -567,6 +591,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -649,5 +675,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label30;
     }
 }
