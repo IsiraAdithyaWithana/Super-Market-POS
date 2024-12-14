@@ -69,8 +69,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
@@ -514,13 +514,6 @@
             this.panel3.Size = new System.Drawing.Size(1547, 50);
             this.panel3.TabIndex = 127;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(433, 744);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(397, 22);
-            this.textBox2.TabIndex = 0;
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -533,10 +526,22 @@
             this.label30.Text = "Close Day - Cash Drawer Closing Amount";
             this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(401, 757);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(247, 57);
+            this.button3.TabIndex = 128;
+            this.button3.Text = "CLEAR";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form7
             // 
             this.ClientSize = new System.Drawing.Size(1546, 896);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label29);
@@ -675,7 +680,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button button3;
     }
 }
