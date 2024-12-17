@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblcus = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,13 +37,13 @@
             this.btnUp = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.txtCredit = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblTyp = new System.Windows.Forms.Label();
             this.lblRej = new System.Windows.Forms.Label();
             this.lblCont = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblDes = new System.Windows.Forms.Label();
             this.lblAdd = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,13 +68,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(735, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(482, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtSearch.Location = new System.Drawing.Point(735, 47);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(482, 20);
+            this.txtSearch.TabIndex = 17;
             // 
             // label1
             // 
@@ -105,13 +105,13 @@
             this.panel1.Controls.Add(this.btnUp);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtType);
+            this.panel1.Controls.Add(this.txtContact);
+            this.panel1.Controls.Add(this.txtCredit);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.txtDescription);
+            this.panel1.Controls.Add(this.txtAddress);
             this.panel1.Controls.Add(this.lblTyp);
             this.panel1.Controls.Add(this.lblRej);
             this.panel1.Controls.Add(this.lblCont);
@@ -120,13 +120,14 @@
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblDes);
             this.panel1.Controls.Add(this.lblAdd);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.lblId);
             this.panel1.Location = new System.Drawing.Point(-2, 330);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1265, 340);
             this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCle
             // 
@@ -180,61 +181,61 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(188, 20);
             this.dateTimePicker1.TabIndex = 18;
             // 
-            // textBox10
+            // txtType
             // 
-            this.textBox10.Location = new System.Drawing.Point(652, 95);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(203, 20);
-            this.textBox10.TabIndex = 17;
+            this.txtType.Location = new System.Drawing.Point(652, 95);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(203, 20);
+            this.txtType.TabIndex = 17;
             // 
-            // textBox8
+            // txtContact
             // 
-            this.textBox8.Location = new System.Drawing.Point(652, 28);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(203, 20);
-            this.textBox8.TabIndex = 15;
+            this.txtContact.Location = new System.Drawing.Point(652, 28);
+            this.txtContact.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(203, 20);
+            this.txtContact.TabIndex = 15;
             // 
-            // textBox7
+            // txtCredit
             // 
-            this.textBox7.Location = new System.Drawing.Point(388, 95);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(182, 20);
-            this.textBox7.TabIndex = 14;
+            this.txtCredit.Location = new System.Drawing.Point(388, 95);
+            this.txtCredit.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCredit.Name = "txtCredit";
+            this.txtCredit.Size = new System.Drawing.Size(182, 20);
+            this.txtCredit.TabIndex = 14;
             // 
-            // textBox6
+            // txtEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(367, 58);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtEmail.Location = new System.Drawing.Point(367, 58);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(203, 20);
+            this.txtEmail.TabIndex = 13;
             // 
-            // textBox5
+            // txtName
             // 
-            this.textBox5.Location = new System.Drawing.Point(367, 28);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(203, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtName.Location = new System.Drawing.Point(367, 28);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(203, 20);
+            this.txtName.TabIndex = 12;
             // 
-            // textBox4
+            // txtDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 95);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtDescription.Location = new System.Drawing.Point(90, 95);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(203, 20);
+            this.txtDescription.TabIndex = 11;
             // 
-            // textBox3
+            // txtAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 60);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtAddress.Location = new System.Drawing.Point(90, 60);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(203, 20);
+            this.txtAddress.TabIndex = 10;
             // 
             // lblTyp
             // 
@@ -324,13 +325,13 @@
             this.lblAdd.TabIndex = 2;
             this.lblAdd.Text = "Address";
             // 
-            // textBox2
+            // txtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 28);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtId.Location = new System.Drawing.Point(90, 28);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(203, 20);
+            this.txtId.TabIndex = 1;
             // 
             // lblId
             // 
@@ -434,7 +435,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcus);
             this.Controls.Add(this.panel1);
@@ -443,6 +444,7 @@
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -453,7 +455,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblcus;
         private System.Windows.Forms.Panel panel1;
@@ -462,13 +464,13 @@
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.TextBox txtCredit;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblTyp;
         private System.Windows.Forms.Label lblRej;
         private System.Windows.Forms.Label lblCont;
@@ -477,7 +479,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblDes;
         private System.Windows.Forms.Label lblAdd;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

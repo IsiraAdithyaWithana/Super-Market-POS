@@ -21,5 +21,15 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
