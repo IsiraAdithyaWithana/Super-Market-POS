@@ -70,17 +70,18 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(735, 47);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(743, 30);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(482, 20);
+            this.txtSearch.Size = new System.Drawing.Size(482, 26);
             this.txtSearch.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(644, 40);
+            this.label1.Location = new System.Drawing.Point(644, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 29);
@@ -91,7 +92,7 @@
             // 
             this.lblcus.AutoSize = true;
             this.lblcus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcus.Location = new System.Drawing.Point(46, 30);
+            this.lblcus.Location = new System.Drawing.Point(15, 18);
             this.lblcus.Name = "lblcus";
             this.lblcus.Size = new System.Drawing.Size(164, 37);
             this.lblcus.TabIndex = 15;
