@@ -440,9 +440,9 @@
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(21, 16);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 16);
+            this.lblID.Size = new System.Drawing.Size(20, 16);
             this.lblID.TabIndex = 0;
-            this.lblID.Text = "Id";
+            this.lblID.Text = "ID";
             this.lblID.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox4
