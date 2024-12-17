@@ -185,7 +185,7 @@
             // txtType
             // 
             this.txtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtType.Location = new System.Drawing.Point(994, 168);
+            this.txtType.Location = new System.Drawing.Point(979, 135);
             this.txtType.Margin = new System.Windows.Forms.Padding(2);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(275, 26);
