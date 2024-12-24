@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,52 @@ namespace Super_Market_POS
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            string username = txtUserName.Text.Trim();
+            string password = txtPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter both username and password.");
+                return;
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Query to validate user credentials
+                    string query = "SELECT UserID FROM Users WHERE username = @username AND password = @password";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+
+                    object result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        int userId = Convert.ToInt32(result);
+
+                        // Redirect to Form2 and pass UserID
+                        Form2 form2 = new Form2(connectionString, userId);
+                        this.Hide();
+                        form2.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }
