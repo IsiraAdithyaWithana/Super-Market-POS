@@ -85,9 +85,9 @@ namespace Super_Market_POS
                         int userId = Convert.ToInt32(result);
 
                         // Redirect to Form2 and pass UserID
-                        Form2 form2 = new Form12(connectionString, userId);
+                        Form12 form12 = new Form12(connectionString, userId);
                         this.Hide();
-                        form2.Show();
+                        form12.Show();
                     }
                     else
                     {

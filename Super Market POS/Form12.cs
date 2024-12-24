@@ -13,10 +13,12 @@ namespace Super_Market_POS
     public partial class Form12 : Form
     {
         string connectionString;
-        public Form12(string connStr)
+        int userId;
+        public Form12(string connStr,int user)
         {
             InitializeComponent();
             connectionString = connStr;
+            userId = user;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -32,6 +34,13 @@ namespace Super_Market_POS
         private void pictureBox9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(connectionString);
+            this.Hide();
+            form1.Show();
         }
     }
 }
