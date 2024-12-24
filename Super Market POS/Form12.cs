@@ -12,9 +12,11 @@ namespace Super_Market_POS
 {
     public partial class Form12 : Form
     {
-        public Form12()
+        string connectionString;
+        public Form12(string connStr)
         {
             InitializeComponent();
+            connectionString = connStr;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
