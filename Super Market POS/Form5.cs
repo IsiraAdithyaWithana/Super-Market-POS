@@ -31,5 +31,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -113,17 +113,17 @@
             this.panel1.Controls.Add(this.lblAdd);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.lblId);
-            this.panel1.Location = new System.Drawing.Point(-3, 406);
+            this.panel1.Location = new System.Drawing.Point(0, 376);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1687, 418);
+            this.panel1.Size = new System.Drawing.Size(1252, 294);
             this.panel1.TabIndex = 14;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCle
             // 
             this.btnCle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCle.Location = new System.Drawing.Point(431, 292);
+            this.btnCle.Location = new System.Drawing.Point(480, 233);
             this.btnCle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCle.Name = "btnCle";
             this.btnCle.Size = new System.Drawing.Size(109, 41);
@@ -134,7 +134,7 @@
             // btnRem
             // 
             this.btnRem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRem.Location = new System.Drawing.Point(308, 292);
+            this.btnRem.Location = new System.Drawing.Point(330, 233);
             this.btnRem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRem.Name = "btnRem";
             this.btnRem.Size = new System.Drawing.Size(109, 41);
@@ -145,7 +145,7 @@
             // btnUp
             // 
             this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(180, 292);
+            this.btnUp.Location = new System.Drawing.Point(180, 233);
             this.btnUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(109, 41);
@@ -156,7 +156,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(52, 292);
+            this.btnAdd.Location = new System.Drawing.Point(34, 233);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 41);
@@ -167,62 +167,63 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(1305, 91);
+            this.dateTimePicker1.Location = new System.Drawing.Point(923, 81);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(304, 30);
             this.dateTimePicker1.TabIndex = 18;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtContact
             // 
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.Location = new System.Drawing.Point(1305, 20);
+            this.txtContact.Location = new System.Drawing.Point(923, 20);
             this.txtContact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(365, 30);
+            this.txtContact.Size = new System.Drawing.Size(294, 30);
             this.txtContact.TabIndex = 15;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(731, 91);
+            this.txtEmail.Location = new System.Drawing.Point(521, 81);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(365, 30);
+            this.txtEmail.Size = new System.Drawing.Size(262, 30);
             this.txtEmail.TabIndex = 13;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(731, 20);
+            this.txtName.Location = new System.Drawing.Point(521, 13);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(365, 30);
+            this.txtName.Size = new System.Drawing.Size(262, 30);
             this.txtName.TabIndex = 12;
             // 
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(173, 171);
+            this.txtDescription.Location = new System.Drawing.Point(146, 154);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(365, 30);
+            this.txtDescription.Size = new System.Drawing.Size(290, 30);
             this.txtDescription.TabIndex = 11;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(173, 91);
+            this.txtAddress.Location = new System.Drawing.Point(117, 81);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(365, 30);
+            this.txtAddress.Size = new System.Drawing.Size(278, 30);
             this.txtAddress.TabIndex = 10;
             // 
             // lblRej
             // 
             this.lblRej.AutoSize = true;
             this.lblRej.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRej.Location = new System.Drawing.Point(1177, 98);
+            this.lblRej.Location = new System.Drawing.Point(809, 88);
             this.lblRej.Name = "lblRej";
             this.lblRej.Size = new System.Drawing.Size(108, 20);
             this.lblRej.TabIndex = 8;
@@ -232,7 +233,7 @@
             // 
             this.lblCont.AutoSize = true;
             this.lblCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCont.Location = new System.Drawing.Point(1177, 20);
+            this.lblCont.Location = new System.Drawing.Point(818, 20);
             this.lblCont.Name = "lblCont";
             this.lblCont.Size = new System.Drawing.Size(67, 20);
             this.lblCont.TabIndex = 7;
@@ -242,7 +243,7 @@
             // 
             this.lblCon.AutoSize = true;
             this.lblCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCon.Location = new System.Drawing.Point(27, 173);
+            this.lblCon.Location = new System.Drawing.Point(24, 154);
             this.lblCon.Name = "lblCon";
             this.lblCon.Size = new System.Drawing.Size(116, 20);
             this.lblCon.TabIndex = 6;
@@ -252,7 +253,7 @@
             // 
             this.lblEm.AutoSize = true;
             this.lblEm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEm.Location = new System.Drawing.Point(603, 98);
+            this.lblEm.Location = new System.Drawing.Point(449, 88);
             this.lblEm.Name = "lblEm";
             this.lblEm.Size = new System.Drawing.Size(51, 20);
             this.lblEm.TabIndex = 5;
@@ -262,7 +263,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(603, 20);
+            this.lblName.Location = new System.Drawing.Point(447, 20);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(53, 20);
             this.lblName.TabIndex = 4;
@@ -272,7 +273,7 @@
             // 
             this.lblAdd.AutoSize = true;
             this.lblAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdd.Location = new System.Drawing.Point(28, 98);
+            this.lblAdd.Location = new System.Drawing.Point(24, 88);
             this.lblAdd.Name = "lblAdd";
             this.lblAdd.Size = new System.Drawing.Size(71, 20);
             this.lblAdd.TabIndex = 2;
@@ -281,10 +282,10 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(173, 20);
+            this.txtId.Location = new System.Drawing.Point(117, 13);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(365, 30);
+            this.txtId.Size = new System.Drawing.Size(278, 30);
             this.txtId.TabIndex = 1;
             // 
             // lblId
@@ -309,12 +310,12 @@
             this.Column5,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 90);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1684, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(1204, 282);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -372,7 +373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcus);
