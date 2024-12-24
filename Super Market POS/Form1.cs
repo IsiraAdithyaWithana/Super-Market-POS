@@ -12,9 +12,11 @@ namespace Super_Market_POS
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        string connectionString;
+        public Form1(string connStr)
         {
             InitializeComponent();
+            connectionString = connStr;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace Super_Market_POS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
