@@ -36,5 +36,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void lblId_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
