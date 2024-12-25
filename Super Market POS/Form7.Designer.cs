@@ -208,6 +208,7 @@
             this.label20.Size = new System.Drawing.Size(96, 25);
             this.label20.TabIndex = 116;
             this.label20.Text = "0000000";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label19
             // 
@@ -230,6 +231,7 @@
             this.label18.Size = new System.Drawing.Size(96, 25);
             this.label18.TabIndex = 114;
             this.label18.Text = "0000000";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
@@ -241,6 +243,7 @@
             this.label17.Size = new System.Drawing.Size(96, 25);
             this.label17.TabIndex = 113;
             this.label17.Text = "0000000";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label13
             // 
@@ -261,6 +264,7 @@
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown10.TabIndex = 111;
+            this.numericUpDown10.ValueChanged += new System.EventHandler(this.numericUpDown10_ValueChanged);
             // 
             // numericUpDown11
             // 
@@ -270,6 +274,7 @@
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown11.TabIndex = 110;
+            this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
             // 
             // numericUpDown12
             // 
@@ -279,6 +284,7 @@
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown12.TabIndex = 109;
+            this.numericUpDown12.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
             // 
             // label14
             // 
@@ -321,6 +327,7 @@
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown5.TabIndex = 105;
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // numericUpDown6
             // 
@@ -330,6 +337,7 @@
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown6.TabIndex = 104;
+            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // numericUpDown7
             // 
@@ -339,6 +347,7 @@
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown7.TabIndex = 103;
+            this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
             // numericUpDown8
             // 
@@ -348,6 +357,7 @@
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown8.TabIndex = 102;
+            this.numericUpDown8.ValueChanged += new System.EventHandler(this.numericUpDown8_ValueChanged);
             // 
             // label8
             // 
@@ -412,6 +422,7 @@
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown4.TabIndex = 96;
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // numericUpDown3
             // 
@@ -421,6 +432,7 @@
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown3.TabIndex = 95;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -430,6 +442,7 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown2.TabIndex = 94;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown1
             // 
@@ -439,6 +452,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(161, 30);
             this.numericUpDown1.TabIndex = 93;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label7
             // 

@@ -17,7 +17,7 @@ namespace Super_Market_POS
             string connectionString = "Server=DESKTOP-NADUNI\\SQLEXPRESS;Database=POS System;Integrated Security=True;";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(connectionString));
+            Application.Run(new Form7());
         }
     }
 }

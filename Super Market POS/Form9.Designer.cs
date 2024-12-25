@@ -254,6 +254,7 @@
             this.label17.Size = new System.Drawing.Size(96, 25);
             this.label17.TabIndex = 72;
             this.label17.Text = "0000000";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label13
             // 

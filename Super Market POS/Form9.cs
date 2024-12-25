@@ -32,5 +32,10 @@ namespace Super_Market_POS
             this.Hide();
             form12.Show();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
