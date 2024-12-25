@@ -44,6 +44,31 @@ namespace Super_Market_POS
             form12.Show();
         }
 
+        private void UpdateTotal()
+        {
+            // Initialize the total
+            decimal total = 0;
+
+            // Add values of all labels you want to include
+            total += GetLabelValue(label18); // Add the value of label18
+                                             // Add other labels as needed, for example:
+                                             // total += GetLabelValue(label19);
+                                             // total += GetLabelValue(label20);
+
+            // Display the total in label28
+            label28.Text = total.ToString();
+        }
+
+        private decimal GetLabelValue(Label label)
+        {
+            // Try to parse the label text into a decimal
+            if (decimal.TryParse(label.Text, out decimal value))
+            {
+                return value;
+            }
+            return 0; // Default to 0 if the label text is not a valid number
+        }
+
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             // Get the value from numericUpDown2
@@ -54,7 +79,9 @@ namespace Super_Market_POS
 
             // Display the result in label18
             label18.Text = result.ToString();
+            UpdateTotal();
         }
+    
 
         private void label18_Click(object sender, EventArgs e)
         {
@@ -69,7 +96,9 @@ namespace Super_Market_POS
             decimal result = value * 1;
 
             label17.Text = result.ToString();
-        }
+        UpdateTotal();
+    
+}
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
@@ -79,6 +108,7 @@ namespace Super_Market_POS
             decimal result = value * 5;
 
             label19.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
@@ -89,6 +119,7 @@ namespace Super_Market_POS
             decimal result = value * 10;
 
             label20.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void label17_Click(object sender, EventArgs e)
