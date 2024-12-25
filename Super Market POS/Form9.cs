@@ -12,14 +12,25 @@ namespace Super_Market_POS
 {
     public partial class Form9 : Form
     {
-        public Form9()
+        string connectionString;
+        int userId;
+
+        public Form9(string connStr)
         {
             InitializeComponent();
+          
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12(connectionString,userId);
+            this.Hide();
+            form12.Show();
         }
     }
 }

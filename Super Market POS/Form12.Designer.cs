@@ -216,6 +216,7 @@
             this.pictureBox13.Size = new System.Drawing.Size(276, 138);
             this.pictureBox13.TabIndex = 14;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // Form12
             // 
