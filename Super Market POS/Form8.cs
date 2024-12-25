@@ -16,5 +16,10 @@ namespace Super_Market_POS
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
