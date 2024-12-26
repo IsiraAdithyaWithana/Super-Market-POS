@@ -14,10 +14,10 @@ namespace Super_Market_POS
         [STAThread]
         static void Main()
         {
-            string connectionString = "Server=DESKTOP-NADUNI\\SQLEXPRESS;Database=POS System;Integrated Security=True;";
+            string connectionString = "Server=Isira_Adi;Database=POS System;Integrated Security=True;";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form7());
+            Application.Run(new Form1(connectionString));
         }
     }
 }
