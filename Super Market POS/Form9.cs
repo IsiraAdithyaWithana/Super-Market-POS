@@ -49,18 +49,7 @@ namespace Super_Market_POS
 
         private void Form9_Load(object sender, EventArgs e)
         {
-            numericUpDown1.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown2.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown3.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown4.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown8.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown7.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown6.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown5.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown12.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown11.ValueChanged += numericUpDown_ValueChanged;
-            numericUpDown10.ValueChanged += numericUpDown_ValueChanged;
-
+            
         }
 
         private void label28_Click(object sender, EventArgs e)
@@ -83,6 +72,55 @@ namespace Super_Market_POS
                     (numericUpDown10.Value * 5000);
 
             label28.Text = "Rs. " + total.ToString("N2");
+
+            // 
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+
+            // Check which NumericUpDown triggered the event and update the corresponding Label
+            if (numericUpDown == numericUpDown1)
+            {
+                label17.Text = (numericUpDown1.Value * 1).ToString();
+            }
+            else if (numericUpDown == numericUpDown2)
+            {
+                label18.Text = (numericUpDown2.Value * 2).ToString();
+            }
+            else if (numericUpDown == numericUpDown3)
+            {
+                label19.Text = (numericUpDown3.Value * 5).ToString();
+            }
+            else if (numericUpDown == numericUpDown4)
+            {
+                label20.Text = (numericUpDown4.Value * 10).ToString();
+            }
+            else if (numericUpDown == numericUpDown8)
+            {
+                label21.Text = (numericUpDown8.Value * 10).ToString();
+            }
+            else if (numericUpDown == numericUpDown7)
+            {
+                label22.Text = (numericUpDown.Value * 20).ToString();
+            }
+            else if (numericUpDown == numericUpDown6)
+            {
+                label23.Text = (numericUpDown6.Value * 50).ToString();
+            }
+            else if (numericUpDown == numericUpDown5)
+            {
+                label24.Text = (numericUpDown5.Value * 100).ToString();
+            }
+            else if (numericUpDown == numericUpDown12)
+            {
+                label25.Text = (numericUpDown12.Value * 500).ToString();
+            }
+            else if (numericUpDown == numericUpDown11)
+            {
+                label26.Text = (numericUpDown11.Value * 1000).ToString();
+            }
+            else if (numericUpDown == numericUpDown10)
+            {
+                label27.Text = (numericUpDown10.Value * 5000).ToString();
+            }
         }
     }
 }
