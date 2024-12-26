@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Super_Market_POS
 {
-    public partial class Form5 : Form
+    public partial class Form3 : Form
     {
-        public Form5()
+        public Form3()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -22,7 +27,12 @@ namespace Super_Market_POS
 
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
         {
 
         }
@@ -32,9 +42,5 @@ namespace Super_Market_POS
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
