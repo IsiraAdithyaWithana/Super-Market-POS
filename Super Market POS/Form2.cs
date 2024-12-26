@@ -206,17 +206,145 @@ namespace Super_Market_POS
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the ID of the selected row
+                int selectedID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["colID"].Value);
 
+                // Get the updated values from the textboxes
+                string updatedName = txtName.Text.Trim();
+                decimal updatedPrice;
+                int updatedQuantity;
+
+                // Validate input
+                if (!decimal.TryParse(txtMRP.Text.Trim(), out updatedPrice))
+                {
+                    MessageBox.Show("Please enter a valid price.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txtAvailableQuantity.Text.Trim(), out updatedQuantity))
+                {
+                    MessageBox.Show("Please enter a valid quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    // SQL query to update the row
+                    string query = @"
+                UPDATE Stock
+                SET Product_Name = @Name, 
+                    Price = @Price, 
+                    Available_Quantity = @Quantity
+                WHERE StockID = @ID";
+
+                    try
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            // Set parameters
+                            cmd.Parameters.AddWithValue("@ID", selectedID);
+                            cmd.Parameters.AddWithValue("@Name", updatedName);
+                            cmd.Parameters.AddWithValue("@Price", updatedPrice);
+                            cmd.Parameters.AddWithValue("@Quantity", updatedQuantity);
+
+                            // Execute the query
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Record updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Refresh the DataGridView
+                                LoadStockData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No record was updated. Please check your input.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while updating: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the ID of the selected row
+                int selectedID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["colID"].Value);
 
+                // Confirm deletion
+                DialogResult dialogResult = MessageBox.Show(
+                    "Are you sure you want to delete this record?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        string query = "DELETE FROM Stock WHERE StockID = @ID";
+
+                        try
+                        {
+                            conn.Open();
+                            using (SqlCommand cmd = new SqlCommand(query, conn))
+                            {
+                                // Set the parameter
+                                cmd.Parameters.AddWithValue("@ID", selectedID);
+
+                                // Execute the query
+                                int rowsAffected = cmd.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    // Refresh the DataGridView
+                                    LoadStockData();
+
+                                    // Clear textboxes
+                                    txtName.Clear();
+                                    txtMRP.Clear();
+                                    txtAvailableQuantity.Clear();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No record was deleted. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"An error occurred while deleting: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            txtName.Clear();
+            txtMRP.Clear();
+            txtAvailableQuantity.Clear();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -271,6 +399,19 @@ namespace Super_Market_POS
                     MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtSearch.Clear();
+
+            // Refresh the DataGridView by reloading the stock data
+            LoadStockData();
+
+            // Clear the textboxes to start fresh
+            txtName.Clear();
+            txtMRP.Clear();
+            txtAvailableQuantity.Clear();
         }
     }
 }
