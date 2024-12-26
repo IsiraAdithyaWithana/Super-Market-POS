@@ -16,10 +16,5 @@ namespace Super_Market_POS
         {
             InitializeComponent();
         }
-
-        private void Form10_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
