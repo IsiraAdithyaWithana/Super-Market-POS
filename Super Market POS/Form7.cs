@@ -30,8 +30,19 @@ namespace Super_Market_POS
         {
 
         }
+        private void label13_Click(object sender, EventArgs e)
+        {
 
+        }
         private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label28_Click(object sender, EventArgs e)
         {
 
         }
@@ -42,6 +53,11 @@ namespace Super_Market_POS
             Form12 form12 = new Form12(connectionString,userId);
             this.Hide();
             form12.Show();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            
         }
 
         private void UpdateTotal()
