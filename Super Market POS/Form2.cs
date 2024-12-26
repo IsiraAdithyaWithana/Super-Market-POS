@@ -21,6 +21,86 @@ namespace Super_Market_POS
             InitializeComponent();
             connectionString = connStr;
             userId = user;
+            InitializeDataGridView();
+        }
+
+        private void InitializeDataGridView()
+        {
+            dataGridView1.AutoGenerateColumns = false; // Prevent automatic column generation
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Fill the DataGridView width
+
+            // Add columns manually
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colID",
+                HeaderText = "ID",
+                DataPropertyName = "colID", // Must match the alias in the SQL query
+                Width = 50, // Initial width; will stretch proportionally
+                FillWeight = 10 // Weight for proportional width
+            });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colName",
+                HeaderText = "Name",
+                DataPropertyName = "colName",
+                Width = 150,
+                FillWeight = 40 // Adjusted for proportional width
+            });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colMRP",
+                HeaderText = "MRP",
+                DataPropertyName = "colMRP",
+                Width = 100,
+                FillWeight = 30 // Adjusted for proportional width
+            });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colAvailableQuantity",
+                HeaderText = "Available Quantity",
+                DataPropertyName = "colAvailableQuantity",
+                Width = 150,
+                FillWeight = 20 // Adjusted for proportional width
+            });
+
+            // Optional: Center column headers
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.LightGray;
+            dataGridView1.EnableHeadersVisualStyles = false; // Disable default styles to apply custom styles
+
+
+            // Optional: Center align cell content
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+        }
+
+
+        private void LoadStockData()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "SELECT StockID AS colID, Price AS colMRP, Product_Name AS colName, Available_Quantity AS colAvailableQuantity FROM Stock";
+
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Bind the DataTable to the DataGridView
+                    dataGridView1.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -135,7 +215,7 @@ namespace Super_Market_POS
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            LoadStockData();
         }
     }
 }
