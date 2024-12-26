@@ -66,10 +66,21 @@ namespace Super_Market_POS
             decimal total = 0;
 
             // Add values of all labels you want to include
+            total += GetLabelValue(label17);
             total += GetLabelValue(label18); // Add the value of label18
-                                             // Add other labels as needed, for example:
-                                             // total += GetLabelValue(label19);
-                                             // total += GetLabelValue(label20);
+            total += GetLabelValue(label19);
+            total += GetLabelValue(label20);
+            total += GetLabelValue(label21);
+            total += GetLabelValue(label22);
+            total += GetLabelValue(label23);
+            total += GetLabelValue(label24);
+            total += GetLabelValue(label25);
+            total += GetLabelValue(label26);
+            total += GetLabelValue(label27);
+
+            // Add other labels as needed, for example:
+            // total += GetLabelValue(label19);
+            // total += GetLabelValue(label20);
 
             // Display the total in label28
             label28.Text = total.ToString();
@@ -112,7 +123,7 @@ namespace Super_Market_POS
             decimal result = value * 1;
 
             label17.Text = result.ToString();
-        UpdateTotal();
+            UpdateTotal();
     
 }
 
