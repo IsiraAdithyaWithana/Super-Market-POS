@@ -132,5 +132,10 @@ namespace Super_Market_POS
         {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
