@@ -105,8 +105,19 @@ namespace Super_Market_POS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+            {
+                // Get the currently selected row
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
 
+                // Populate the TextBoxes with the data from the selected row
+                txtName.Text = selectedRow.Cells["colName"].Value?.ToString() ?? string.Empty;
+                txtMRP.Text = selectedRow.Cells["colMRP"].Value?.ToString() ?? string.Empty;
+                txtAvailableQuantity.Text = selectedRow.Cells["colAvailableQuantity"].Value?.ToString() ?? string.Empty;
+            }
         }
+
+
 
         
 
@@ -216,6 +227,50 @@ namespace Super_Market_POS
         private void Form2_Load(object sender, EventArgs e)
         {
             LoadStockData();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchStock();
+        }
+
+        private void SearchStock()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                // Get the search term from the textbox
+                string searchValue = txtSearch.Text.Trim();
+
+                // Define the SQL query with search conditions for ID or Name
+                string query = @"
+            SELECT 
+                StockID AS colID, 
+                Price AS colMRP, 
+                Product_Name AS colName, 
+                Available_Quantity AS colAvailableQuantity 
+            FROM Stock
+            WHERE 
+                StockID LIKE @Search OR 
+                Product_Name LIKE @Search";
+
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // Use parameterized query to prevent SQL injection
+                    cmd.Parameters.AddWithValue("@Search", "%" + searchValue + "%");
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Bind the filtered data to the DataGridView
+                    dataGridView1.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
