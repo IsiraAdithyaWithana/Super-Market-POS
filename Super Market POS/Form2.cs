@@ -202,7 +202,7 @@ namespace Super_Market_POS
                     }
                 }
             }
-            LoadStockData();
+            LoadStockData(); 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
