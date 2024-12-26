@@ -62,7 +62,55 @@ namespace Super_Market_POS
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            string productName = txtName.Text.Trim();
+            decimal price;
+            int quantity;
 
+            // Validate inputs
+            if (string.IsNullOrEmpty(productName) ||
+                !decimal.TryParse(txtMRP.Text.Trim(), out price) ||
+                !int.TryParse(txtAvailableQuantity.Text.Trim(), out quantity))
+            {
+                MessageBox.Show("Please enter valid inputs.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Insert into the database
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = "INSERT INTO Stock (Product_Name, Price, Available_Quantity) VALUES (@ProductName, @Price, @Quantity)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Add parameters
+                    cmd.Parameters.AddWithValue("@ProductName", productName);
+                    cmd.Parameters.AddWithValue("@Price", price);
+                    cmd.Parameters.AddWithValue("@Quantity", quantity);
+
+                    try
+                    {
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Record added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Optionally clear textboxes after successful insert
+                            txtName.Clear();
+                            txtMRP.Clear();
+                            txtAvailableQuantity.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add the record.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
