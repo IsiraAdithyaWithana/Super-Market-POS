@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
 
 namespace Super_Market_POS
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        string connectionString;
+        int userId;
+        public Form2(string connStr, int user)
         {
             InitializeComponent();
+            connectionString = connStr;
+            userId = user;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
