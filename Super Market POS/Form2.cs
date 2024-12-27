@@ -34,9 +34,9 @@ namespace Super_Market_POS
             {
                 Name = "colID",
                 HeaderText = "ID",
-                DataPropertyName = "colID", // Must match the alias in the SQL query
-                Width = 50, // Initial width; will stretch proportionally
-                FillWeight = 10 // Weight for proportional width
+                DataPropertyName = "colID",
+                Width = 50,
+                FillWeight = 10
             });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
@@ -45,7 +45,7 @@ namespace Super_Market_POS
                 HeaderText = "Name",
                 DataPropertyName = "colName",
                 Width = 150,
-                FillWeight = 40 // Adjusted for proportional width
+                FillWeight = 40
             });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
@@ -54,7 +54,7 @@ namespace Super_Market_POS
                 HeaderText = "MRP",
                 DataPropertyName = "colMRP",
                 Width = 100,
-                FillWeight = 30 // Adjusted for proportional width
+                FillWeight = 30
             });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
@@ -63,7 +63,28 @@ namespace Super_Market_POS
                 HeaderText = "Available Quantity",
                 DataPropertyName = "colAvailableQuantity",
                 Width = 150,
-                FillWeight = 20 // Adjusted for proportional width
+                FillWeight = 20
+            });
+
+            // Add columns for Warning Message and Created At, but hide them initially
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colWarningMessage",
+                HeaderText = "Warning Message",
+                DataPropertyName = "WarningMessage",
+                Width = 250,
+                FillWeight = 50,
+                Visible = false // Hide this column initially
+            });
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colCreatedAt",
+                HeaderText = "Created At",
+                DataPropertyName = "CreatedAt",
+                Width = 150,
+                FillWeight = 40,
+                Visible = false // Hide this column initially
             });
 
             // Optional: Center column headers
@@ -71,7 +92,6 @@ namespace Super_Market_POS
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.LightGray;
             dataGridView1.EnableHeadersVisualStyles = false; // Disable default styles to apply custom styles
-
 
             // Optional: Center align cell content
             foreach (DataGridViewColumn column in dataGridView1.Columns)
@@ -99,6 +119,38 @@ namespace Super_Market_POS
                 catch (Exception ex)
                 {
                     MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void LoadStockWarnings()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                // Join StockWarnings table with the Stock table to get MRP (Price)
+                string query = @"
+            SELECT 
+                w.WarningID AS colID, 
+                s.Product_Name AS colName, 
+                s.Available_Quantity AS colAvailableQuantity, 
+                s.Price AS colMRP, 
+                w.WarningMessage, 
+                w.CreatedAt 
+            FROM StockWarnings w
+            INNER JOIN Stock s ON w.Product_Name = s.Product_Name"; // Join based on Product_Name
+
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Bind the DataTable to the DataGridView
+                    dataGridView1.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while loading warning data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -406,13 +458,27 @@ namespace Super_Market_POS
         {
             txtSearch.Clear();
 
-            // Refresh the DataGridView by reloading the stock data
+            // Hide the "Warning Message" and "Created At" columns
+            dataGridView1.Columns["colWarningMessage"].Visible = false;
+            dataGridView1.Columns["colCreatedAt"].Visible = false;
+
+            // Reload the stock data
             LoadStockData();
 
             // Clear the textboxes to start fresh
             txtName.Clear();
             txtMRP.Clear();
             txtAvailableQuantity.Clear();
+        }
+
+        private void btnWarning_Click(object sender, EventArgs e)
+        {
+            // Show the "Warning Message" and "Created At" columns when btnWarning is clicked
+            dataGridView1.Columns["colWarningMessage"].Visible = true;
+            dataGridView1.Columns["colCreatedAt"].Visible = true;
+
+            // Load warning data to populate the DataGridView
+            LoadStockWarnings();
         }
     }
 }

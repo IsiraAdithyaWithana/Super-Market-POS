@@ -56,8 +56,14 @@ namespace Super_Market_POS
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            foreach (Control control in this.Controls)
+            {
+                if (control is NumericUpDown numericUpDown)
+                {
+                    numericUpDown.Value = numericUpDown.Minimum; // Reset to the minimum value
+                }
+            }
 
-            
         }
 
         private void UpdateTotal()
@@ -78,9 +84,7 @@ namespace Super_Market_POS
             total += GetLabelValue(label26);
             total += GetLabelValue(label27);
 
-            // Add other labels as needed, for example:
-            // total += GetLabelValue(label19);
-            // total += GetLabelValue(label20);
+            
 
             // Display the total in label28
             label28.Text = total.ToString();
