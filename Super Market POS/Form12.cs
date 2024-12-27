@@ -65,5 +65,12 @@ namespace Super_Market_POS
             this.Hide();
             form2.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8(connectionString);
+            this.Hide();
+            form8.Show();
+        }
     }
 }
