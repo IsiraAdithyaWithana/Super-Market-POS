@@ -17,7 +17,8 @@ namespace Super_Market_POS
             string connectionString = "Server=Mandinu;Database=POS System;Integrated Security=True;";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form9(connectionString));
+            int userId = 0; 
+            Application.Run(new Form1(connectionString));
         }
     }
 }
