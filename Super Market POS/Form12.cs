@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Super_Market_POS
 {
@@ -56,6 +57,13 @@ namespace Super_Market_POS
             Form7 form7 = new Form7();
             this.Hide();
             form7.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(connectionString,userId);
+            this.Hide();
+            form2.Show();
         }
     }
 }
