@@ -98,6 +98,7 @@
             this.button2.TabIndex = 86;
             this.button2.Text = "OPEN THE DAY";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -527,6 +528,7 @@
             this.button4.TabIndex = 88;
             this.button4.Text = "START THE SHIFT ";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // numericUpDown8
             // 

@@ -19,7 +19,7 @@ namespace Super_Market_POS
         {
             InitializeComponent();
             connectionString = connStr;
-            userId = user;
+            this.userId = user;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Super_Market_POS
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {   
-            Form9 form9 = new Form9(connectionString);
+            Form9 form9 = new Form9(connectionString,userId);
             this.Hide();
             form9.Show();
         }
@@ -64,6 +64,13 @@ namespace Super_Market_POS
             Form2 form2 = new Form2(connectionString,userId);
             this.Hide();
             form2.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8(connectionString);
+            this.Hide();
+            form8.Show();
         }
     }
 }

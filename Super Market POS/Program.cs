@@ -14,7 +14,7 @@ namespace Super_Market_POS
         [STAThread]
         static void Main()
         {
-            string connectionString = "Server=Mandinu;Database=POS System;Integrated Security=True;";
+            string connectionString = "Server=DESKTOP-NADUNI\\SQLEXPRESS;Database=POS System;Integrated Security=True;";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form7());

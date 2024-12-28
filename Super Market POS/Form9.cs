@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,28 +13,30 @@ namespace Super_Market_POS
 {
     public partial class Form9 : Form
     {
-        string connectionString;
-        int userId;
-        
+        private readonly string connectionString;
+        private readonly int userId;
 
-     
-        public Form9(string connStr)
+
+
+        public Form9(string connStr, int userIdentifier)
         {
             InitializeComponent();
-  
-           
-
+            connectionString = connStr;
+            userId = userIdentifier;
 
         }
 
-        public Form9()
-        {
-        }
+        
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }
+
+
+     
+
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -120,6 +123,79 @@ namespace Super_Market_POS
             else if (numericUpDown == numericUpDown10)
             {
                 label27.Text = (numericUpDown10.Value * 5000).ToString();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal startAmount = decimal.Parse(label28.Text.Replace("Rs. ", ""));
+                
+
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO CashDrawer (UserID, StartTime, StartAmount) VALUES (@UserID, GETDATE(), @StartAmount)",
+                        conn))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@UserID", userId);
+                        cmd.Parameters.AddWithValue("@StartAmount", startAmount);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Day opened successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal newShiftAmount = decimal.Parse(label28.Text.Replace("Rs. ", ""));
+                
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string selectQuery = "SELECT TOP 1 EndAmount FROM CashDrawer WHERE EndTime IS NOT NULL ORDER BY EndTime DESC";
+                    string insertQuery = "INSERT INTO CashDrawer (UserID, StartTime, StartAmount) VALUES (@UserID, GETDATE(), @StartAmount)";
+
+                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, conn))
+                    {
+                        object result = selectCmd.ExecuteScalar();
+                        decimal? lastEndAmount = result != DBNull.Value ? (decimal?)result : null;
+
+                        if (lastEndAmount == null || lastEndAmount == newShiftAmount)
+                        {
+                            using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                            {
+                                insertCmd.Parameters.AddWithValue("@UserID", userId);
+                                insertCmd.Parameters.AddWithValue("@StartAmount", newShiftAmount);
+
+                                insertCmd.ExecuteNonQuery();
+                                MessageBox.Show("Shift started successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mismatch detected: Last end amount and new shift amount do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
