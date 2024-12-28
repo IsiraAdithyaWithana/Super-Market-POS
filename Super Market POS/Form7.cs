@@ -305,6 +305,11 @@ namespace Super_Market_POS
             }
         }
 
+        private decimal GetShiftOpenAmount()
+        {
+            throw new NotImplementedException();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -385,6 +390,11 @@ namespace Super_Market_POS
                 );
             }
 
+        }
+
+        private void ResetFields()
+        {
+            throw new NotImplementedException();
         }
     }
 }
