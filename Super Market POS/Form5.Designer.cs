@@ -33,6 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtdate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtFname = new System.Windows.Forms.TextBox();
-            this.txtdate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +123,15 @@
             this.panel1.Size = new System.Drawing.Size(1669, 346);
             this.panel1.TabIndex = 24;
             // 
+            // txtdate
+            // 
+            this.txtdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdate.Location = new System.Drawing.Point(1318, 100);
+            this.txtdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtdate.Name = "txtdate";
+            this.txtdate.Size = new System.Drawing.Size(339, 30);
+            this.txtdate.TabIndex = 42;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -184,7 +193,7 @@
             // txtContact
             // 
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.Location = new System.Drawing.Point(1306, 43);
+            this.txtContact.Location = new System.Drawing.Point(1318, 43);
             this.txtContact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(339, 30);
@@ -294,15 +303,6 @@
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(343, 30);
             this.txtFname.TabIndex = 24;
-            // 
-            // txtdate
-            // 
-            this.txtdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdate.Location = new System.Drawing.Point(1306, 100);
-            this.txtdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtdate.Name = "txtdate";
-            this.txtdate.Size = new System.Drawing.Size(339, 30);
-            this.txtdate.TabIndex = 42;
             // 
             // Form5
             // 

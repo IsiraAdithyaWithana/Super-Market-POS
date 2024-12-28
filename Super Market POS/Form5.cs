@@ -70,49 +70,87 @@ namespace Super_Market_POS
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (ValidateInputs())
+            string firstName = txtFname.Text.Trim();
+            string lastName = txtLname.Text.Trim();
+            string phoneNumber = txtContact.Text.Trim();
+            string address = txtAddress.Text.Trim();
+            string email = txtEmail.Text.Trim();
+            decimal creditAmount;
+            DateTime registerDate = DateTime.Now;
+
+            // Validate inputs
+            if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName))
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                MessageBox.Show("First Name and Last Name cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txtCamount.Text.Trim(), out creditAmount) || creditAmount < 0)
+            {
+                MessageBox.Show("Credit Amount must be a non-negative number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(phoneNumber) && phoneNumber.Length != 10)
+            {
+                MessageBox.Show("Phone Number must be 10 digits.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Insert into the database
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = @"
+        INSERT INTO Customer 
+            (First_Name, Last_Name, Phone_Number, Address, Email, RegisterDate, CreditAmount)
+        VALUES 
+            (@FirstName, @LastName, @PhoneNumber, @Address, @Email, @RegisterDate, @CreditAmount)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    // Add parameters with explicit types
+                    cmd.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50).Value = firstName;
+                    cmd.Parameters.Add("@LastName", SqlDbType.NVarChar, 50).Value = lastName;
+                    cmd.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar, 15).Value = phoneNumber;
+                    cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 200).Value = address;
+                    cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 100).Value = email;
+                    cmd.Parameters.Add("@RegisterDate", SqlDbType.DateTime).Value = registerDate;
+                    cmd.Parameters.Add("@CreditAmount", SqlDbType.Decimal).Value = creditAmount;
+
                     try
                     {
-                        connection.Open();
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
 
-                        // Call the stored procedure to get a new CustomerID
-                        SqlCommand getIdCommand = new SqlCommand("AutoGenerateCustomerID", connection);
-                        getIdCommand.CommandType = CommandType.StoredProcedure;
-                        int newCustomerId = (int)getIdCommand.ExecuteScalar();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Customer added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        string query = @"
-                        INSERT INTO Customer 
-                            (CustomerID, First_Name, Last_Name, Phone_Number, Address, Email, RegisterDate, CreditAmount)
-                        VALUES
-                            (@CustomerID, @First_Name, @Last_Name, @Phone_Number, @Address, @Email, @RegisterDate, @CreditAmount)";
+                            // Clear input fields
+                            txtFname.Clear();
+                            txtLname.Clear();
+                            txtContact.Clear();
+                            txtAddress.Clear();
+                            txtEmail.Clear();
+                            txtCamount.Clear();
 
-                        SqlCommand insertCommand = new SqlCommand(query, connection);
-
-                        insertCommand.Parameters.AddWithValue("@CustomerID", newCustomerId);
-                        insertCommand.Parameters.AddWithValue("@First_Name", txtFname.Text);
-                        insertCommand.Parameters.AddWithValue("@Last_Name", txtLname.Text);
-                        insertCommand.Parameters.AddWithValue("@Phone_Number", txtContact.Text);
-                        insertCommand.Parameters.AddWithValue("@Address", txtAddress.Text);
-                        insertCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
-                        insertCommand.Parameters.AddWithValue("@RegisterDate", DateTime.Now);
-                        insertCommand.Parameters.AddWithValue("@CreditAmount", decimal.Parse(txtCamount.Text));
-
-                        insertCommand.ExecuteNonQuery();
-
-                        MessageBox.Show("Customer added successfully with CustomerID: " + newCustomerId);
-
-                        LoadData();
-                        ClearFields();
+                            // Refresh data (assuming LoadData() updates the customer data grid)
+                            LoadData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add the customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error adding customer: " + ex.Message);
+                        MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        
                     }
                 }
             }
+            LoadData();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
