@@ -14,11 +14,11 @@ namespace Super_Market_POS
         [STAThread]
         static void Main()
         {
-            string connectionString = "Server=Mandinu;Database=POS System;Integrated Security=True;";
+            string connectionString = "Server=DESKTOP-MT250QK;Database=POS System;Integrated Security=True;";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            int userId = 0; 
-            Application.Run(new Form1(connectionString));
+           
+            Application.Run(new Form5(connectionString));
         }
     }
 }
