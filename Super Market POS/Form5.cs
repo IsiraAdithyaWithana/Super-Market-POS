@@ -96,6 +96,7 @@ namespace Super_Market_POS
 
                 using (SqlCommand cmd = new SqlCommand(ProcedureInsertCustomerDetails, conn))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
                     // Add parameters with explicit types
                     cmd.Parameters.Add("@First_Name", SqlDbType.VarChar, 50).Value = firstName;
                     cmd.Parameters.Add("@Last_Name", SqlDbType.VarChar, 50).Value = lastName;
