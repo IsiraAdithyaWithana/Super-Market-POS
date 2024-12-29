@@ -14,7 +14,7 @@ namespace Super_Market_POS
         [STAThread]
         static void Main()
         {
-            string connectionString = "Server=DESKTOP-MT250QK;Database=POS System;Integrated Security=True;";
+            string connectionString = "Server=SanuLK;Database=POS System;Integrated Security=True;";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form5(connectionString));

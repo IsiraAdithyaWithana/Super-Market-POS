@@ -64,7 +64,7 @@ namespace Super_Market_POS
                 txtAddress.Text = selectedRow.Cells["Address"].Value?.ToString() ?? string.Empty;
                 txtEmail.Text = selectedRow.Cells["Email"].Value?.ToString() ?? string.Empty;
                 txtdate.Text = selectedRow.Cells["RegisterDate"].Value?.ToString() ?? string.Empty;
-                txtCamount.Text = selectedRow.Cells["CreditAmount"].Value?.ToString();
+               
             }
         }
 
@@ -82,12 +82,6 @@ namespace Super_Market_POS
             if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName))
             {
                 MessageBox.Show("First Name and Last Name cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (!decimal.TryParse(txtCamount.Text.Trim(), out creditAmount) || creditAmount < 0)
-            {
-                MessageBox.Show("Credit Amount must be a non-negative number.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -115,7 +109,6 @@ namespace Super_Market_POS
                     cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 200).Value = address;
                     cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 100).Value = email;
                     cmd.Parameters.Add("@RegisterDate", SqlDbType.DateTime).Value = registerDate;
-                    cmd.Parameters.Add("@CreditAmount", SqlDbType.Decimal).Value = creditAmount;
 
                     try
                     {
@@ -132,7 +125,6 @@ namespace Super_Market_POS
                             txtContact.Clear();
                             txtAddress.Clear();
                             txtEmail.Clear();
-                            txtCamount.Clear();
 
                             // Refresh data (assuming LoadData() updates the customer data grid)
                             LoadData();
@@ -184,7 +176,7 @@ namespace Super_Market_POS
                         command.Parameters.AddWithValue("@Address", txtAddress.Text);
                         command.Parameters.AddWithValue("@Email", txtEmail.Text);
                         command.Parameters.AddWithValue("@RegisterDate", DateTime.Now);
-                        command.Parameters.AddWithValue("@CreditAmount", Convert.ToDecimal(txtCamount.Text));
+
 
                         command.ExecuteNonQuery();
                         MessageBox.Show("Customer updated successfully.");
@@ -289,28 +281,32 @@ namespace Super_Market_POS
             txtContact.Clear();
             txtAddress.Clear();
             txtEmail.Clear();
-            txtCamount.Clear();
+
             txtdate.Clear();
         }
 
         private bool ValidateInputs()
         {
-            if (string.IsNullOrWhiteSpace(txtFname.Text) || string.IsNullOrWhiteSpace(txtLname.Text) ||
-                string.IsNullOrWhiteSpace(txtContact.Text) || string.IsNullOrWhiteSpace(txtAddress.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtCamount.Text))
+            // Check if any text field is null or whitespace
+            if (string.IsNullOrWhiteSpace(txtFname.Text) ||
+                string.IsNullOrWhiteSpace(txtLname.Text) ||
+                string.IsNullOrWhiteSpace(txtContact.Text) ||
+                string.IsNullOrWhiteSpace(txtAddress.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text))
             {
+                // Show an error message
                 MessageBox.Show("All fields are required.");
                 return false;
             }
 
-            if (!decimal.TryParse(txtCamount.Text, out _))
-            {
-                MessageBox.Show("Credit Amount must be a valid number.");
-                return false;
-            }
+            return NewMethod();
 
-            return true;
+            bool NewMethod()
+            {
+                return true; // Validation succeeded
+            }
         }
+
 
         private void InitializeDataGridView()
         {
