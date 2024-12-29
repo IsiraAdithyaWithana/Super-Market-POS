@@ -670,5 +670,12 @@ namespace Super_Market_POS
                 MessageBox.Show("Please enter a Customer ID");
             }
         }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12(connectionString, 1);
+            this.Hide();
+            form12.Show();
+        }
     }
 }

@@ -30,7 +30,15 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.totallbl = new System.Windows.Forms.Label();
+            this.btnupdateitem = new System.Windows.Forms.Button();
+            this.tnadditem = new System.Windows.Forms.Button();
             this.txtitemname = new System.Windows.Forms.TextBox();
             this.lblitemname = new System.Windows.Forms.Label();
             this.lbltotalamount = new System.Windows.Forms.Label();
@@ -44,6 +52,9 @@
             this.lblqty = new System.Windows.Forms.Label();
             this.lblitemcode = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btncusadd = new System.Windows.Forms.Button();
+            this.lblcustomerid = new System.Windows.Forms.Label();
+            this.txtcustomerid = new System.Windows.Forms.TextBox();
             this.Invoice = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.totallblinvoice = new System.Windows.Forms.Label();
@@ -66,17 +77,7 @@
             this.lblfirstname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblinvoice = new System.Windows.Forms.Label();
-            this.tnadditem = new System.Windows.Forms.Button();
-            this.btnupdateitem = new System.Windows.Forms.Button();
-            this.totallbl = new System.Windows.Forms.Label();
-            this.ItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtcustomerid = new System.Windows.Forms.TextBox();
-            this.lblcustomerid = new System.Windows.Forms.Label();
-            this.btncusadd = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -115,6 +116,41 @@
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // ItemCode
+            // 
+            this.ItemCode.HeaderText = "Item Code";
+            this.ItemCode.MinimumWidth = 10;
+            this.ItemCode.Name = "ItemCode";
+            this.ItemCode.Width = 200;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Item Name";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.Width = 200;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 200;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.Width = 200;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.Width = 200;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -138,6 +174,47 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1168, 278);
             this.panel4.TabIndex = 0;
+            // 
+            // totallbl
+            // 
+            this.totallbl.AutoSize = true;
+            this.totallbl.BackColor = System.Drawing.Color.Transparent;
+            this.totallbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totallbl.Location = new System.Drawing.Point(858, 38);
+            this.totallbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.totallbl.Name = "totallbl";
+            this.totallbl.Size = new System.Drawing.Size(115, 45);
+            this.totallbl.TabIndex = 34;
+            this.totallbl.Text = " *****";
+            this.totallbl.Click += new System.EventHandler(this.totallbl_Click);
+            // 
+            // btnupdateitem
+            // 
+            this.btnupdateitem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnupdateitem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnupdateitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdateitem.Location = new System.Drawing.Point(565, 142);
+            this.btnupdateitem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnupdateitem.Name = "btnupdateitem";
+            this.btnupdateitem.Size = new System.Drawing.Size(120, 71);
+            this.btnupdateitem.TabIndex = 33;
+            this.btnupdateitem.Text = "Update";
+            this.btnupdateitem.UseVisualStyleBackColor = false;
+            this.btnupdateitem.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tnadditem
+            // 
+            this.tnadditem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tnadditem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.tnadditem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tnadditem.Location = new System.Drawing.Point(437, 142);
+            this.tnadditem.Margin = new System.Windows.Forms.Padding(4);
+            this.tnadditem.Name = "tnadditem";
+            this.tnadditem.Size = new System.Drawing.Size(120, 71);
+            this.tnadditem.TabIndex = 32;
+            this.tnadditem.Text = "Add";
+            this.tnadditem.UseVisualStyleBackColor = false;
+            this.tnadditem.Click += new System.EventHandler(this.tnadditem_Click);
             // 
             // txtitemname
             // 
@@ -286,6 +363,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnback);
             this.panel2.Controls.Add(this.btncusadd);
             this.panel2.Controls.Add(this.lblcustomerid);
             this.panel2.Controls.Add(this.txtcustomerid);
@@ -302,6 +380,41 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(509, 838);
             this.panel2.TabIndex = 2;
+            // 
+            // btncusadd
+            // 
+            this.btncusadd.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btncusadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncusadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncusadd.Location = new System.Drawing.Point(402, 103);
+            this.btncusadd.Margin = new System.Windows.Forms.Padding(4);
+            this.btncusadd.Name = "btncusadd";
+            this.btncusadd.Size = new System.Drawing.Size(90, 34);
+            this.btncusadd.TabIndex = 33;
+            this.btncusadd.Text = "Enter";
+            this.btncusadd.UseVisualStyleBackColor = false;
+            this.btncusadd.Click += new System.EventHandler(this.btncusadd_Click);
+            // 
+            // lblcustomerid
+            // 
+            this.lblcustomerid.AutoSize = true;
+            this.lblcustomerid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcustomerid.Location = new System.Drawing.Point(21, 113);
+            this.lblcustomerid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcustomerid.Name = "lblcustomerid";
+            this.lblcustomerid.Size = new System.Drawing.Size(115, 20);
+            this.lblcustomerid.TabIndex = 11;
+            this.lblcustomerid.Text = "Customer ID";
+            this.lblcustomerid.Click += new System.EventHandler(this.lblLastName_Click);
+            // 
+            // txtcustomerid
+            // 
+            this.txtcustomerid.Location = new System.Drawing.Point(154, 113);
+            this.txtcustomerid.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcustomerid.Name = "txtcustomerid";
+            this.txtcustomerid.Size = new System.Drawing.Size(229, 22);
+            this.txtcustomerid.TabIndex = 10;
+            this.txtcustomerid.TextChanged += new System.EventHandler(this.txtcustomerid_TextChanged);
             // 
             // Invoice
             // 
@@ -568,116 +681,19 @@
             this.lblinvoice.TabIndex = 0;
             this.lblinvoice.Text = "INVOICE NO       ";
             // 
-            // tnadditem
+            // btnback
             // 
-            this.tnadditem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tnadditem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.tnadditem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tnadditem.Location = new System.Drawing.Point(437, 142);
-            this.tnadditem.Margin = new System.Windows.Forms.Padding(4);
-            this.tnadditem.Name = "tnadditem";
-            this.tnadditem.Size = new System.Drawing.Size(120, 71);
-            this.tnadditem.TabIndex = 32;
-            this.tnadditem.Text = "Add";
-            this.tnadditem.UseVisualStyleBackColor = false;
-            this.tnadditem.Click += new System.EventHandler(this.tnadditem_Click);
-            // 
-            // btnupdateitem
-            // 
-            this.btnupdateitem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnupdateitem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnupdateitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdateitem.Location = new System.Drawing.Point(565, 142);
-            this.btnupdateitem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnupdateitem.Name = "btnupdateitem";
-            this.btnupdateitem.Size = new System.Drawing.Size(120, 71);
-            this.btnupdateitem.TabIndex = 33;
-            this.btnupdateitem.Text = "Update";
-            this.btnupdateitem.UseVisualStyleBackColor = false;
-            this.btnupdateitem.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // totallbl
-            // 
-            this.totallbl.AutoSize = true;
-            this.totallbl.BackColor = System.Drawing.Color.Transparent;
-            this.totallbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totallbl.Location = new System.Drawing.Point(858, 38);
-            this.totallbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.totallbl.Name = "totallbl";
-            this.totallbl.Size = new System.Drawing.Size(115, 45);
-            this.totallbl.TabIndex = 34;
-            this.totallbl.Text = " *****";
-            this.totallbl.Click += new System.EventHandler(this.totallbl_Click);
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.HeaderText = "Item Code";
-            this.ItemCode.MinimumWidth = 10;
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.Width = 200;
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Item Name";
-            this.ItemName.MinimumWidth = 6;
-            this.ItemName.Name = "ItemName";
-            this.ItemName.Width = 200;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 200;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.Width = 200;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.Width = 200;
-            // 
-            // txtcustomerid
-            // 
-            this.txtcustomerid.Location = new System.Drawing.Point(154, 113);
-            this.txtcustomerid.Margin = new System.Windows.Forms.Padding(4);
-            this.txtcustomerid.Name = "txtcustomerid";
-            this.txtcustomerid.Size = new System.Drawing.Size(229, 22);
-            this.txtcustomerid.TabIndex = 10;
-            this.txtcustomerid.TextChanged += new System.EventHandler(this.txtcustomerid_TextChanged);
-            // 
-            // lblcustomerid
-            // 
-            this.lblcustomerid.AutoSize = true;
-            this.lblcustomerid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcustomerid.Location = new System.Drawing.Point(21, 113);
-            this.lblcustomerid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblcustomerid.Name = "lblcustomerid";
-            this.lblcustomerid.Size = new System.Drawing.Size(115, 20);
-            this.lblcustomerid.TabIndex = 11;
-            this.lblcustomerid.Text = "Customer ID";
-            this.lblcustomerid.Click += new System.EventHandler(this.lblLastName_Click);
-            // 
-            // btncusadd
-            // 
-            this.btncusadd.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btncusadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncusadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncusadd.Location = new System.Drawing.Point(402, 103);
-            this.btncusadd.Margin = new System.Windows.Forms.Padding(4);
-            this.btncusadd.Name = "btncusadd";
-            this.btncusadd.Size = new System.Drawing.Size(90, 34);
-            this.btncusadd.TabIndex = 33;
-            this.btncusadd.Text = "Enter";
-            this.btncusadd.UseVisualStyleBackColor = false;
-            this.btncusadd.Click += new System.EventHandler(this.btncusadd_Click);
+            this.btnback.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnback.Location = new System.Drawing.Point(341, 17);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(90, 34);
+            this.btnback.TabIndex = 34;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = false;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // Form8
             // 
@@ -755,5 +771,6 @@
         private System.Windows.Forms.TextBox txtcustomerid;
         private System.Windows.Forms.Label lblcustomerid;
         private System.Windows.Forms.Button btncusadd;
+        private System.Windows.Forms.Button btnback;
     }
 }
