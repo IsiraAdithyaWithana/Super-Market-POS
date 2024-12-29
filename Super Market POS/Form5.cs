@@ -34,7 +34,7 @@ namespace Super_Market_POS
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT CustomerID, First_Name, Last_Name, Phone_Number, Address, Email, RegisterDate, CreditAmount FROM Customer";
+                string query = "select CustomerID, First_Name, Last_Name, Address, Email, RegisterDate, Phone_Number FROM ShowCustomerDetails";
 
                 try
                 {
@@ -63,7 +63,6 @@ namespace Super_Market_POS
                 txtContact.Text = selectedRow.Cells["Phone_Number"].Value?.ToString() ?? string.Empty;
                 txtAddress.Text = selectedRow.Cells["Address"].Value?.ToString() ?? string.Empty;
                 txtEmail.Text = selectedRow.Cells["Email"].Value?.ToString() ?? string.Empty;
-                txtdate.Text = selectedRow.Cells["RegisterDate"].Value?.ToString() ?? string.Empty;
                
             }
         }
@@ -75,7 +74,6 @@ namespace Super_Market_POS
             string phoneNumber = txtContact.Text.Trim();
             string address = txtAddress.Text.Trim();
             string email = txtEmail.Text.Trim();
-            decimal creditAmount;
             DateTime registerDate = DateTime.Now;
 
             // Validate inputs
@@ -94,21 +92,17 @@ namespace Super_Market_POS
             // Insert into the database
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = @"
-        INSERT INTO Customer 
-            (First_Name, Last_Name, Phone_Number, Address, Email, RegisterDate, CreditAmount)
-        VALUES 
-            (@FirstName, @LastName, @PhoneNumber, @Address, @Email, @RegisterDate, @CreditAmount)";
+                string ProcedureInsertCustomerDetails = "InsertCustomerDetails";
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlCommand cmd = new SqlCommand(ProcedureInsertCustomerDetails, conn))
                 {
                     // Add parameters with explicit types
-                    cmd.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50).Value = firstName;
-                    cmd.Parameters.Add("@LastName", SqlDbType.NVarChar, 50).Value = lastName;
-                    cmd.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar, 15).Value = phoneNumber;
-                    cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 200).Value = address;
-                    cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 100).Value = email;
+                    cmd.Parameters.Add("@First_Name", SqlDbType.VarChar, 50).Value = firstName;
+                    cmd.Parameters.Add("@Last_Name", SqlDbType.VarChar, 50).Value = lastName;
+                    cmd.Parameters.Add("@Address", SqlDbType.VarChar, 150).Value = address;
+                    cmd.Parameters.Add("@Email", SqlDbType.VarChar, 100).Value = email;
                     cmd.Parameters.Add("@RegisterDate", SqlDbType.DateTime).Value = registerDate;
+                    cmd.Parameters.Add("@Phone_Number", SqlDbType.VarChar, 10).Value = phoneNumber;
 
                     try
                     {
@@ -282,7 +276,6 @@ namespace Super_Market_POS
             txtAddress.Clear();
             txtEmail.Clear();
 
-            txtdate.Clear();
         }
 
         private bool ValidateInputs()
@@ -316,7 +309,7 @@ namespace Super_Market_POS
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "CustomerID",
-                HeaderText = "CustomerID",
+                HeaderText = "Customer ID",
                 DataPropertyName = "CustomerID",
             });
 
@@ -336,13 +329,6 @@ namespace Super_Market_POS
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
-                Name = "Phone_Number",
-                HeaderText = "Phone Number",
-                DataPropertyName = "Phone_Number",
-            });
-
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
-            {
                 Name = "Address",
                 HeaderText = "Address",
                 DataPropertyName = "Address",
@@ -358,15 +344,15 @@ namespace Super_Market_POS
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "RegisterDate",
-                HeaderText = "Register Date",
+                HeaderText = "RegisterDate",
                 DataPropertyName = "RegisterDate",
             });
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
-                Name = "CreditAmount",
-                HeaderText = "Credit Amount",
-                DataPropertyName = "CreditAmount",
+                Name = "Phone_Number",
+                HeaderText = "Phone Number",
+                DataPropertyName = "Phone_Number",
             });
 
             dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -377,6 +363,11 @@ namespace Super_Market_POS
             {
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
+        }
+
+        private void txtFname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
