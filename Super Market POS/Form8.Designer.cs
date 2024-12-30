@@ -625,9 +625,9 @@
             this.lblinvoice.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinvoice.Location = new System.Drawing.Point(5, 9);
             this.lblinvoice.Name = "lblinvoice";
-            this.lblinvoice.Size = new System.Drawing.Size(213, 31);
+            this.lblinvoice.Size = new System.Drawing.Size(144, 31);
             this.lblinvoice.TabIndex = 0;
-            this.lblinvoice.Text = "INVOICE NO       ";
+            this.lblinvoice.Text = "Invoice No";
             // 
             // textBox1
             // 
