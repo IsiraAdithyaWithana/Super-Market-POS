@@ -209,10 +209,10 @@
             // 
             this.lblitemname.AutoSize = true;
             this.lblitemname.BackColor = System.Drawing.Color.Transparent;
-            this.lblitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitemname.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblitemname.Location = new System.Drawing.Point(6, 87);
             this.lblitemname.Name = "lblitemname";
-            this.lblitemname.Size = new System.Drawing.Size(96, 20);
+            this.lblitemname.Size = new System.Drawing.Size(110, 20);
             this.lblitemname.TabIndex = 30;
             this.lblitemname.Text = "Item Name";
             // 
