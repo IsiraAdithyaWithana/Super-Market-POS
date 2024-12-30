@@ -199,7 +199,7 @@
             // 
             this.txtitemname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtitemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtitemname.Location = new System.Drawing.Point(103, 82);
+            this.txtitemname.Location = new System.Drawing.Point(121, 82);
             this.txtitemname.Name = "txtitemname";
             this.txtitemname.Size = new System.Drawing.Size(199, 31);
             this.txtitemname.TabIndex = 31;
