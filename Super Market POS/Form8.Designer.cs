@@ -186,7 +186,7 @@
             // 
             this.tnadditem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tnadditem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.tnadditem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tnadditem.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tnadditem.Location = new System.Drawing.Point(328, 115);
             this.tnadditem.Name = "tnadditem";
             this.tnadditem.Size = new System.Drawing.Size(90, 58);
