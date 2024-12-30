@@ -20,9 +20,16 @@ namespace Super_Market_POS
             InitializeComponent();
             connectionString = connStr;
             LoadInvoiceNumber();
-            btncusadd.Click += btncusadd_Click;
+ 
 
             txtcustomerid.TextChanged += txtcustomerid_TextChanged;
+
+            // Make itemcode and price textboxes read-only
+            txtitemcode.ReadOnly = true;
+            txtprice.ReadOnly = true;
+
+            txtitemcode.BackColor = SystemColors.Control;
+            txtprice.BackColor = SystemColors.Control;
 
 
         }
@@ -113,7 +120,57 @@ namespace Super_Market_POS
 
         private void txtitemname_TextChanged(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(txtitemname.Text))
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = @"
+                    SELECT StockID, Price, Available_Quantity 
+                    FROM Stock 
+                    WHERE Product_Name LIKE @ProductName + '%'";
 
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@ProductName", txtitemname.Text);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Populate the item code and price textboxes
+                                txtitemcode.Text = reader["StockID"].ToString();
+                                txtprice.Text = reader["Price"].ToString();
+
+                                // Optionally, you can check available quantity
+                                int availableQty = Convert.ToInt32(reader["Available_Quantity"]);
+                                if (availableQty <= 0)
+                                {
+                                    MessageBox.Show("Warning: This item is out of stock!", "Stock Warning",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            else
+                            {
+                                // Clear fields if no item is found
+                                txtitemcode.Clear();
+                                txtprice.Clear();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error fetching item details: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                // Clear fields if item name is empty
+                txtitemcode.Clear();
+                txtprice.Clear();
+            }
         }
 
         private void txtqty_TextChanged(object sender, EventArgs e)
@@ -159,7 +216,7 @@ namespace Super_Market_POS
                 lbltlamount.Text = "0.00";
 
                 // Reset the quantity selector
-                numericUpDownfullqty.Value = 0;
+                itemqtys.Text = "0";
             }
 
             else
@@ -201,8 +258,9 @@ namespace Super_Market_POS
                 }
             }
 
-            // Update numericUpDownfullqty with the calculated total quantity
-            numericUpDownfullqty.Value = totalQuantity;
+            // Update itemqtys.Text with the calculated total quantity (converted to string)
+            itemqtys.Text = totalQuantity.ToString();
+
         }
 
 
@@ -319,7 +377,7 @@ namespace Super_Market_POS
                 lbltlamount.Text = "0.00";
                 lbltotalbalance.Text = "0.00";
                 totallbl.Text = "0.00";
-                numericUpDownfullqty.Value = 0;
+                itemqtys.Text = "0";
 
                 // Load new invoice number
                 LoadInvoiceNumber();
@@ -628,47 +686,7 @@ namespace Super_Market_POS
 
         private void btncusadd_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtcustomerid.Text))
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    try
-                    {
-                        conn.Open();
-                        string query = @"
-                    SELECT c.First_Name AS FirstName, cp.Phone_Number AS PhoneNumber
-                    FROM Customer c
-                    LEFT JOIN Customer_Phone cp ON c.CustomerID = cp.CustomerID
-                    WHERE c.CustomerID = @CustomerID";
-
-                        SqlCommand cmd = new SqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@CustomerID", txtcustomerid.Text);
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                txtFirstName.Text = reader["FirstName"].ToString();
-                                txtcontact.Text = reader["PhoneNumber"].ToString();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Customer not found!");
-                                txtFirstName.Clear();
-                                txtcontact.Clear();
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a Customer ID");
-            }
+          
         }
 
         private void btnback_Click(object sender, EventArgs e)
