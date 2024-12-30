@@ -245,28 +245,7 @@ namespace Super_Market_POS
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(
-                        "SELECT * FROM Customer WHERE First_Name LIKE @SearchText OR Last_Name LIKE @SearchText OR Email LIKE @SearchText",
-                        connection
-                    );
-
-                    adapter.SelectCommand.Parameters.AddWithValue("@SearchText", "%" + txtSearch.Text + "%");
-
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dataGridView1.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error searching data: " + ex.Message);
-                }
-            }
+            
         }
 
         private void ClearFields()
@@ -369,6 +348,49 @@ namespace Super_Market_POS
         private void txtFname_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchCustomer();
+
+        }
+
+        private void SearchCustomer()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                // Get the search term from the textbox
+                string searchValue = txtSearch.Text.Trim();
+
+                // Define the SQL query with search conditions for ID or Name
+                string query = @"
+                select CustomerID, First_Name, Last_Name, Address, Email, RegisterDate, Phone_Number FROM ShowCustomerDetails
+            
+            WHERE 
+                CustomerID LIKE @Search OR 
+                First_Name LIKE @Search OR
+                Last_Name  LIKE @Search OR
+                Phone_Number LIKE @Search";
+
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // Use parameterized query to prevent SQL injection
+                    cmd.Parameters.AddWithValue("@Search", "%" + searchValue + "%");
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Bind the filtered data to the DataGridView
+                    dataGridView1.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
