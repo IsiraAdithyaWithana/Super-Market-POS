@@ -15,10 +15,12 @@ namespace Super_Market_POS
     public partial class Form8 : Form
     {
         string connectionString;
-        public Form8(string connStr)
+        int userId;
+        public Form8(string connStr,int user)
         {
             InitializeComponent();
             connectionString = connStr;
+            userId = user;
             LoadInvoiceNumber();
  
 
@@ -691,12 +693,17 @@ namespace Super_Market_POS
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12(connectionString, 1);
+            Form12 form12 = new Form12(connectionString,userId);
             this.Hide();
             form12.Show();
         }
 
         private void lblinvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
