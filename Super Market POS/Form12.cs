@@ -53,7 +53,6 @@ namespace Super_Market_POS
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-
             Form7 form7 = new Form7();
             this.Hide();
             form7.Show();
@@ -68,7 +67,7 @@ namespace Super_Market_POS
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8(connectionString);
+            Form8 form8 = new Form8(connectionString,userId);
             this.Hide();
             form8.Show();
         }
@@ -78,6 +77,33 @@ namespace Super_Market_POS
             Form5 form5 = new Form5(connectionString,userId);
             this.Hide(); 
             form5.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4(connectionString, userId);
+            this.Hide();
+            form4.Show();
         }
     }
 }

@@ -15,10 +15,12 @@ namespace Super_Market_POS
     public partial class Form8 : Form
     {
         string connectionString;
-        public Form8(string connStr)
+        int userId;
+        public Form8(string connStr,int user)
         {
             InitializeComponent();
             connectionString = connStr;
+            userId = user;
             LoadInvoiceNumber();
  
 
@@ -550,12 +552,11 @@ namespace Super_Market_POS
         private int SaveDiscount(SqlConnection conn, SqlTransaction transaction, decimal discount)
         {
             int discountID = 0;
-            string discountQuery = "INSERT INTO Discount (Discount_Value, Start_Date, End_Date) " +
-                                   "VALUES (@DiscountValue, @StartDate, @EndDate); SELECT SCOPE_IDENTITY();";
+            string discountQuery = "INSERT INTO Discount (Discount_Value, Date) " +
+                                   "VALUES (@DiscountValue, @Date); SELECT SCOPE_IDENTITY();";
             SqlCommand discountCmd = new SqlCommand(discountQuery, conn, transaction);
             discountCmd.Parameters.AddWithValue("@DiscountValue", discount);
-            discountCmd.Parameters.AddWithValue("@StartDate", DateTime.Now);  // Adjust as needed
-            discountCmd.Parameters.AddWithValue("@EndDate", DateTime.Now.AddDays(30)); // Adjust as needed
+            discountCmd.Parameters.AddWithValue("@Date", DateTime.Now);
 
             discountID = Convert.ToInt32(discountCmd.ExecuteScalar());
             return discountID;
@@ -691,12 +692,17 @@ namespace Super_Market_POS
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            Form12 form12 = new Form12(connectionString, 1);
+            Form12 form12 = new Form12(connectionString,userId);
             this.Hide();
             form12.Show();
         }
 
         private void lblinvoice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
