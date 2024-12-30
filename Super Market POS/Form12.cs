@@ -101,7 +101,9 @@ namespace Super_Market_POS
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-
+            Form4 form4 = new Form4(connectionString, userId);
+            this.Hide();
+            form4.Show();
         }
     }
 }
