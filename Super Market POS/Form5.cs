@@ -157,20 +157,21 @@ namespace Super_Market_POS
                     try
                     {
                         connection.Open();
+                        string ProcedureUpdateCustomerDetails = "UpdateCustomerDetails";
                         SqlCommand command = new SqlCommand(
-                            "UPDATE Customer SET First_Name = @First_Name, Last_Name = @Last_Name, Phone_Number = @Phone_Number, " +
-                            "Address = @Address, Email = @Email, RegisterDate = @RegisterDate, CreditAmount = @CreditAmount " +
-                            "WHERE CustomerID = @CustomerID",
+                            ProcedureUpdateCustomerDetails,
                             connection
                         );
+
+                        command.CommandType = CommandType.StoredProcedure;
 
                         command.Parameters.AddWithValue("@CustomerID", customerId);
                         command.Parameters.AddWithValue("@First_Name", txtFname.Text);
                         command.Parameters.AddWithValue("@Last_Name", txtLname.Text);
-                        command.Parameters.AddWithValue("@Phone_Number", txtContact.Text);
                         command.Parameters.AddWithValue("@Address", txtAddress.Text);
                         command.Parameters.AddWithValue("@Email", txtEmail.Text);
-                        command.Parameters.AddWithValue("@RegisterDate", DateTime.Now);
+                        command.Parameters.AddWithValue("@Phone_Number", txtContact.Text);
+                     
 
 
                         command.ExecuteNonQuery();

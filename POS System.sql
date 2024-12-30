@@ -151,6 +151,36 @@ join
 
 on
 	c.CustomerID = cp.CustomerID;
+
+
+create procedure UpdateCustomerDetails
+	@CustomerID int,
+	@First_Name varchar(50),
+	@Last_Name varchar(50),
+	@Address varchar(250),
+	@Email varchar(100),
+	@Phone_Number varchar(10)
+
+as
+begin
+	update Customer
+	set
+		First_Name = @First_Name,
+		Last_Name = @Last_Name,
+		Address = @Address,
+		Email = @Email
+	where
+		CustomerID = @CustomerID;
+
+	update Customer_Phone
+	set
+		Phone_Number = @Phone_Number
+	where
+		CustomerID = @CustomerID;
+
+End;
+
+
 	
 
 
