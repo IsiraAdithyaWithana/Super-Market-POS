@@ -466,7 +466,7 @@
             this.lbltotalbalance.AutoSize = true;
             this.lbltotalbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbltotalbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotalbalance.Location = new System.Drawing.Point(293, 369);
+            this.lbltotalbalance.Location = new System.Drawing.Point(293, 380);
             this.lbltotalbalance.Name = "lbltotalbalance";
             this.lbltotalbalance.Size = new System.Drawing.Size(71, 31);
             this.lbltotalbalance.TabIndex = 20;
@@ -477,10 +477,10 @@
             // 
             this.lblbalance.AutoSize = true;
             this.lblbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbalance.Location = new System.Drawing.Point(11, 383);
             this.lblbalance.Name = "lblbalance";
-            this.lblbalance.Size = new System.Drawing.Size(74, 20);
+            this.lblbalance.Size = new System.Drawing.Size(107, 29);
             this.lblbalance.TabIndex = 19;
             this.lblbalance.Text = "Balance";
             // 
