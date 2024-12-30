@@ -75,7 +75,7 @@ namespace Super_Market_POS
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5(connectionString);
+            Form5 form5 = new Form5(connectionString,userId);
             this.Hide(); 
             form5.Show();
         }

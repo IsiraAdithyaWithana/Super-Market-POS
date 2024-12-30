@@ -44,10 +44,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.btnWarning = new System.Windows.Forms.PictureBox();
             this.btnSearch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnWarning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
@@ -228,7 +230,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(788, 32);
+            this.txtSearch.Location = new System.Drawing.Point(732, 32);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(353, 26);
@@ -239,19 +241,31 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(689, 28);
+            this.label2.Location = new System.Drawing.Point(633, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 29);
             this.label2.TabIndex = 18;
             this.label2.Text = "Search";
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BackgroundImage = global::Super_Market_POS.Properties.Resources.home;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.Location = new System.Drawing.Point(1202, 19);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(50, 50);
+            this.btnHome.TabIndex = 22;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // btnWarning
             // 
             this.btnWarning.BackColor = System.Drawing.Color.Transparent;
             this.btnWarning.BackgroundImage = global::Super_Market_POS.Properties.Resources.warning;
             this.btnWarning.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWarning.Location = new System.Drawing.Point(1202, 19);
+            this.btnWarning.Location = new System.Drawing.Point(1146, 19);
             this.btnWarning.Name = "btnWarning";
             this.btnWarning.Size = new System.Drawing.Size(50, 50);
             this.btnWarning.TabIndex = 21;
@@ -263,7 +277,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.BackgroundImage = global::Super_Market_POS.Properties.Resources.search;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(1146, 19);
+            this.btnSearch.Location = new System.Drawing.Point(1090, 19);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(50, 50);
             this.btnSearch.TabIndex = 20;
@@ -275,6 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnWarning);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -289,6 +304,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnWarning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.ResumeLayout(false);
@@ -315,5 +331,6 @@
         private System.Windows.Forms.PictureBox btnSearch;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.PictureBox btnWarning;
+        private System.Windows.Forms.PictureBox btnHome;
     }
 }
