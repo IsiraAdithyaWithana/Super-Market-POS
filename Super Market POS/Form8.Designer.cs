@@ -488,7 +488,7 @@
             // 
             // txtpaid
             // 
-            this.txtpaid.Location = new System.Drawing.Point(168, 272);
+            this.txtpaid.Location = new System.Drawing.Point(173, 273);
             this.txtpaid.Name = "txtpaid";
             this.txtpaid.Size = new System.Drawing.Size(199, 44);
             this.txtpaid.TabIndex = 18;
@@ -631,7 +631,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(307, 59);
+            this.textBox1.Location = new System.Drawing.Point(312, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(60, 44);
             this.textBox1.TabIndex = 33;
