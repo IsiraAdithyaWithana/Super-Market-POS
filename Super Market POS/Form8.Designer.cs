@@ -256,7 +256,7 @@
             // 
             this.btndeleteline.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btndeleteline.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btndeleteline.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeleteline.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndeleteline.Location = new System.Drawing.Point(328, 10);
             this.btndeleteline.Name = "btndeleteline";
             this.btndeleteline.Size = new System.Drawing.Size(90, 84);
