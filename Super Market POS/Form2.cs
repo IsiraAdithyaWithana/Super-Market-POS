@@ -480,5 +480,12 @@ namespace Super_Market_POS
             // Load warning data to populate the DataGridView
             LoadStockWarnings();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12(connectionString, userId);
+            this.Hide();
+            form12.Show();
+        }
     }
 }

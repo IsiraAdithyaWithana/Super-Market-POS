@@ -16,11 +16,13 @@ namespace Super_Market_POS
     public partial class Form5 : Form
     {
         string connectionString;
+        int userId;
 
-        public Form5(string connStr)
+        public Form5(string connStr, int user)
         {
             InitializeComponent();
             connectionString = connStr;
+            userId = user;
             InitializeDataGridView();
         }
 
@@ -393,6 +395,13 @@ namespace Super_Market_POS
                     MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12(connectionString, userId);
+            this.Hide();
+            form12.Show();
         }
     }
 }
