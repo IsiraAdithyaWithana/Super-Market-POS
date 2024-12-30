@@ -677,5 +677,10 @@ namespace Super_Market_POS
             this.Hide();
             form12.Show();
         }
+
+        private void lblinvoice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

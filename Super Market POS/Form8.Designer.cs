@@ -55,7 +55,6 @@
             this.btncusadd = new System.Windows.Forms.Button();
             this.lblcustomerid = new System.Windows.Forms.Label();
             this.txtcustomerid = new System.Windows.Forms.TextBox();
-            this.Invoice = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.totallblinvoice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -334,7 +333,6 @@
             this.panel2.Controls.Add(this.btncusadd);
             this.panel2.Controls.Add(this.lblcustomerid);
             this.panel2.Controls.Add(this.txtcustomerid);
-            this.panel2.Controls.Add(this.Invoice);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtcontact);
             this.panel2.Controls.Add(this.txtFirstName);
@@ -352,7 +350,7 @@
             this.btnback.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.Location = new System.Drawing.Point(256, 14);
+            this.btnback.Location = new System.Drawing.Point(257, 9);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(68, 28);
             this.btnback.TabIndex = 34;
@@ -391,18 +389,6 @@
             this.txtcustomerid.Size = new System.Drawing.Size(173, 20);
             this.txtcustomerid.TabIndex = 10;
             this.txtcustomerid.TextChanged += new System.EventHandler(this.txtcustomerid_TextChanged);
-            // 
-            // Invoice
-            // 
-            this.Invoice.AutoSize = true;
-            this.Invoice.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Invoice.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Invoice.Location = new System.Drawing.Point(202, 9);
-            this.Invoice.Name = "Invoice";
-            this.Invoice.Size = new System.Drawing.Size(21, 31);
-            this.Invoice.TabIndex = 9;
-            this.Invoice.Text = " ";
-            this.Invoice.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -621,13 +607,14 @@
             // lblinvoice
             // 
             this.lblinvoice.AutoSize = true;
-            this.lblinvoice.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblinvoice.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinvoice.BackColor = System.Drawing.Color.White;
+            this.lblinvoice.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinvoice.Location = new System.Drawing.Point(5, 9);
             this.lblinvoice.Name = "lblinvoice";
-            this.lblinvoice.Size = new System.Drawing.Size(144, 31);
+            this.lblinvoice.Size = new System.Drawing.Size(151, 29);
             this.lblinvoice.TabIndex = 0;
             this.lblinvoice.Text = "Invoice No";
+            this.lblinvoice.Click += new System.EventHandler(this.lblinvoice_Click);
             // 
             // textBox1
             // 
@@ -695,7 +682,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtitemname;
         private System.Windows.Forms.Label lblitemname;
-        private System.Windows.Forms.Label Invoice;
         private System.Windows.Forms.Label totallblinvoice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button tnadditem;
