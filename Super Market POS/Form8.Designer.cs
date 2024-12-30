@@ -544,10 +544,10 @@
             // txtdiscount
             // 
             this.txtdiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiscount.Location = new System.Drawing.Point(173, 137);
+            this.txtdiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiscount.Location = new System.Drawing.Point(205, 137);
             this.txtdiscount.Name = "txtdiscount";
-            this.txtdiscount.Size = new System.Drawing.Size(199, 24);
+            this.txtdiscount.Size = new System.Drawing.Size(167, 31);
             this.txtdiscount.TabIndex = 14;
             this.txtdiscount.TextChanged += new System.EventHandler(this.txtdiscount_TextChanged);
             // 
