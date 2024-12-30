@@ -279,7 +279,7 @@
             // 
             this.txtqty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtqty.Location = new System.Drawing.Point(103, 128);
+            this.txtqty.Location = new System.Drawing.Point(121, 127);
             this.txtqty.Name = "txtqty";
             this.txtqty.Size = new System.Drawing.Size(199, 31);
             this.txtqty.TabIndex = 25;
