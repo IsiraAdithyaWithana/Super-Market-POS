@@ -243,7 +243,7 @@
             // 
             this.btnvoidbill.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnvoidbill.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnvoidbill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvoidbill.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvoidbill.Location = new System.Drawing.Point(424, 11);
             this.btnvoidbill.Name = "btnvoidbill";
             this.btnvoidbill.Size = new System.Drawing.Size(90, 84);
