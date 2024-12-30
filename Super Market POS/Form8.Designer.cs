@@ -478,6 +478,7 @@
             this.lblbalance.AutoSize = true;
             this.lblbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbalance.ForeColor = System.Drawing.Color.Red;
             this.lblbalance.Location = new System.Drawing.Point(11, 383);
             this.lblbalance.Name = "lblbalance";
             this.lblbalance.Size = new System.Drawing.Size(107, 29);
