@@ -466,6 +466,7 @@
             this.lbltotalbalance.AutoSize = true;
             this.lbltotalbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbltotalbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalbalance.ForeColor = System.Drawing.Color.Red;
             this.lbltotalbalance.Location = new System.Drawing.Point(293, 380);
             this.lbltotalbalance.Name = "lbltotalbalance";
             this.lbltotalbalance.Size = new System.Drawing.Size(71, 31);
@@ -478,6 +479,7 @@
             this.lblbalance.AutoSize = true;
             this.lblbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbalance.ForeColor = System.Drawing.Color.Red;
             this.lblbalance.Location = new System.Drawing.Point(11, 383);
             this.lblbalance.Name = "lblbalance";
             this.lblbalance.Size = new System.Drawing.Size(107, 29);
@@ -486,7 +488,7 @@
             // 
             // txtpaid
             // 
-            this.txtpaid.Location = new System.Drawing.Point(168, 272);
+            this.txtpaid.Location = new System.Drawing.Point(173, 273);
             this.txtpaid.Name = "txtpaid";
             this.txtpaid.Size = new System.Drawing.Size(199, 44);
             this.txtpaid.TabIndex = 18;
@@ -629,7 +631,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(307, 59);
+            this.textBox1.Location = new System.Drawing.Point(312, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(60, 44);
             this.textBox1.TabIndex = 33;
