@@ -204,13 +204,14 @@ namespace Super_Market_POS
                 {
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
-                        string query = "DELETE FROM Customer WHERE CustomerID = @CustomerID";
+                        string ProcedureRemoveCustomerDetails = "RemoveCustomerDetails";
 
                         try
                         {
                             conn.Open();
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
+                            using (SqlCommand cmd = new SqlCommand(ProcedureRemoveCustomerDetails, conn))
                             {
+                                cmd.CommandType = CommandType.StoredProcedure;
                                 cmd.Parameters.AddWithValue("@CustomerID", selectedID);
                                 int rowsAffected = cmd.ExecuteNonQuery();
 

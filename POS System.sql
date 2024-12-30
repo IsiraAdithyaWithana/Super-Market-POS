@@ -181,6 +181,17 @@ begin
 End;
 
 
+create procedure RemoveCustomerDetails
+	@CustomerID int
+
+as
+begin
+	delete from Customer_Phone where CustomerID = @CustomerID;
+
+	delete from Customer where CustomerID = @CustomerID;
+
+End;
+
 	
 
 
