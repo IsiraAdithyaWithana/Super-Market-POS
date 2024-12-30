@@ -53,7 +53,7 @@ namespace Super_Market_POS
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
+            Form7 form7 = new Form7(connectionString,userId);
             this.Hide();
             form7.Show();
         }

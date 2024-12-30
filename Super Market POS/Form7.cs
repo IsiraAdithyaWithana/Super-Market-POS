@@ -16,10 +16,11 @@ namespace Super_Market_POS
 
         string connectionString;
         int userId;
-        public Form7()
+        public Form7(string connStr,int user)
         {
             InitializeComponent();
-            
+            connectionString = connStr;
+            userId = user;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
