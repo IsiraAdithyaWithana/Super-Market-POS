@@ -71,19 +71,18 @@
             this.radiobtnpercentage = new System.Windows.Forms.RadioButton();
             this.lbldiscount = new System.Windows.Forms.Label();
             this.lblfullqty = new System.Windows.Forms.Label();
-            this.numericUpDownfullqty = new System.Windows.Forms.NumericUpDown();
             this.txtcontact = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblcontact = new System.Windows.Forms.Label();
             this.lblfirstname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblinvoice = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownfullqty)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -423,6 +422,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.totallblinvoice);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnprint);
@@ -436,7 +436,6 @@
             this.panel3.Controls.Add(this.radiobtnpercentage);
             this.panel3.Controls.Add(this.lbldiscount);
             this.panel3.Controls.Add(this.lblfullqty);
-            this.panel3.Controls.Add(this.numericUpDownfullqty);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(3, 175);
             this.panel3.Name = "panel3";
@@ -585,14 +584,6 @@
             this.lblfullqty.TabIndex = 9;
             this.lblfullqty.Text = "Item Qty(S)";
             // 
-            // numericUpDownfullqty
-            // 
-            this.numericUpDownfullqty.Location = new System.Drawing.Point(307, 64);
-            this.numericUpDownfullqty.Name = "numericUpDownfullqty";
-            this.numericUpDownfullqty.Size = new System.Drawing.Size(62, 44);
-            this.numericUpDownfullqty.TabIndex = 2;
-            this.numericUpDownfullqty.ValueChanged += new System.EventHandler(this.numericUpDownfullqty_ValueChanged);
-            // 
             // txtcontact
             // 
             this.txtcontact.Location = new System.Drawing.Point(197, 142);
@@ -651,6 +642,13 @@
             this.lblinvoice.TabIndex = 0;
             this.lblinvoice.Text = "INVOICE NO       ";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(307, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(60, 44);
+            this.textBox1.TabIndex = 33;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,7 +668,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownfullqty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,7 +698,6 @@
         private System.Windows.Forms.RadioButton radiobtnpercentage;
         private System.Windows.Forms.Label lbldiscount;
         private System.Windows.Forms.Label lblfullqty;
-        private System.Windows.Forms.NumericUpDown numericUpDownfullqty;
         private System.Windows.Forms.TextBox txtcontact;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblcontact;
@@ -727,5 +723,6 @@
         private System.Windows.Forms.Label lblcustomerid;
         private System.Windows.Forms.Button btncusadd;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
