@@ -37,7 +37,6 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.totallbl = new System.Windows.Forms.Label();
-            this.btnupdateitem = new System.Windows.Forms.Button();
             this.tnadditem = new System.Windows.Forms.Button();
             this.txtitemname = new System.Windows.Forms.TextBox();
             this.lblitemname = new System.Windows.Forms.Label();
@@ -153,7 +152,6 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel4.Controls.Add(this.totallbl);
-            this.panel4.Controls.Add(this.btnupdateitem);
             this.panel4.Controls.Add(this.tnadditem);
             this.panel4.Controls.Add(this.txtitemname);
             this.panel4.Controls.Add(this.lblitemname);
@@ -183,19 +181,6 @@
             this.totallbl.TabIndex = 34;
             this.totallbl.Text = " *****";
             this.totallbl.Click += new System.EventHandler(this.totallbl_Click);
-            // 
-            // btnupdateitem
-            // 
-            this.btnupdateitem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnupdateitem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnupdateitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdateitem.Location = new System.Drawing.Point(424, 115);
-            this.btnupdateitem.Name = "btnupdateitem";
-            this.btnupdateitem.Size = new System.Drawing.Size(90, 58);
-            this.btnupdateitem.TabIndex = 33;
-            this.btnupdateitem.Text = "Update";
-            this.btnupdateitem.UseVisualStyleBackColor = false;
-            this.btnupdateitem.Click += new System.EventHandler(this.button2_Click);
             // 
             // tnadditem
             // 
@@ -711,7 +696,6 @@
         private System.Windows.Forms.Label Invoice;
         private System.Windows.Forms.Label totallblinvoice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnupdateitem;
         private System.Windows.Forms.Button tnadditem;
         private System.Windows.Forms.Label totallbl;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
