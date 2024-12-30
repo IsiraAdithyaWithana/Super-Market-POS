@@ -37,7 +37,6 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.totallbl = new System.Windows.Forms.Label();
-            this.btnupdateitem = new System.Windows.Forms.Button();
             this.tnadditem = new System.Windows.Forms.Button();
             this.txtitemname = new System.Windows.Forms.TextBox();
             this.lblitemname = new System.Windows.Forms.Label();
@@ -71,19 +70,18 @@
             this.radiobtnpercentage = new System.Windows.Forms.RadioButton();
             this.lbldiscount = new System.Windows.Forms.Label();
             this.lblfullqty = new System.Windows.Forms.Label();
-            this.numericUpDownfullqty = new System.Windows.Forms.NumericUpDown();
             this.txtcontact = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblcontact = new System.Windows.Forms.Label();
             this.lblfirstname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblinvoice = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownfullqty)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,7 +152,6 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel4.Controls.Add(this.totallbl);
-            this.panel4.Controls.Add(this.btnupdateitem);
             this.panel4.Controls.Add(this.tnadditem);
             this.panel4.Controls.Add(this.txtitemname);
             this.panel4.Controls.Add(this.lblitemname);
@@ -184,19 +181,6 @@
             this.totallbl.TabIndex = 34;
             this.totallbl.Text = " *****";
             this.totallbl.Click += new System.EventHandler(this.totallbl_Click);
-            // 
-            // btnupdateitem
-            // 
-            this.btnupdateitem.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnupdateitem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnupdateitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdateitem.Location = new System.Drawing.Point(424, 115);
-            this.btnupdateitem.Name = "btnupdateitem";
-            this.btnupdateitem.Size = new System.Drawing.Size(90, 58);
-            this.btnupdateitem.TabIndex = 33;
-            this.btnupdateitem.Text = "Update";
-            this.btnupdateitem.UseVisualStyleBackColor = false;
-            this.btnupdateitem.Click += new System.EventHandler(this.button2_Click);
             // 
             // tnadditem
             // 
@@ -423,6 +407,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.totallblinvoice);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnprint);
@@ -436,7 +421,6 @@
             this.panel3.Controls.Add(this.radiobtnpercentage);
             this.panel3.Controls.Add(this.lbldiscount);
             this.panel3.Controls.Add(this.lblfullqty);
-            this.panel3.Controls.Add(this.numericUpDownfullqty);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(3, 175);
             this.panel3.Name = "panel3";
@@ -482,7 +466,7 @@
             this.lbltotalbalance.AutoSize = true;
             this.lbltotalbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lbltotalbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotalbalance.Location = new System.Drawing.Point(293, 369);
+            this.lbltotalbalance.Location = new System.Drawing.Point(293, 380);
             this.lbltotalbalance.Name = "lbltotalbalance";
             this.lbltotalbalance.Size = new System.Drawing.Size(71, 31);
             this.lbltotalbalance.TabIndex = 20;
@@ -493,10 +477,10 @@
             // 
             this.lblbalance.AutoSize = true;
             this.lblbalance.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbalance.Location = new System.Drawing.Point(11, 383);
             this.lblbalance.Name = "lblbalance";
-            this.lblbalance.Size = new System.Drawing.Size(74, 20);
+            this.lblbalance.Size = new System.Drawing.Size(107, 29);
             this.lblbalance.TabIndex = 19;
             this.lblbalance.Text = "Balance";
             // 
@@ -545,10 +529,10 @@
             // txtdiscount
             // 
             this.txtdiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiscount.Location = new System.Drawing.Point(173, 137);
+            this.txtdiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiscount.Location = new System.Drawing.Point(205, 137);
             this.txtdiscount.Name = "txtdiscount";
-            this.txtdiscount.Size = new System.Drawing.Size(199, 24);
+            this.txtdiscount.Size = new System.Drawing.Size(167, 31);
             this.txtdiscount.TabIndex = 14;
             this.txtdiscount.TextChanged += new System.EventHandler(this.txtdiscount_TextChanged);
             // 
@@ -584,14 +568,6 @@
             this.lblfullqty.Size = new System.Drawing.Size(101, 20);
             this.lblfullqty.TabIndex = 9;
             this.lblfullqty.Text = "Item Qty(S)";
-            // 
-            // numericUpDownfullqty
-            // 
-            this.numericUpDownfullqty.Location = new System.Drawing.Point(307, 64);
-            this.numericUpDownfullqty.Name = "numericUpDownfullqty";
-            this.numericUpDownfullqty.Size = new System.Drawing.Size(62, 44);
-            this.numericUpDownfullqty.TabIndex = 2;
-            this.numericUpDownfullqty.ValueChanged += new System.EventHandler(this.numericUpDownfullqty_ValueChanged);
             // 
             // txtcontact
             // 
@@ -651,6 +627,13 @@
             this.lblinvoice.TabIndex = 0;
             this.lblinvoice.Text = "INVOICE NO       ";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(307, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(60, 44);
+            this.textBox1.TabIndex = 33;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,7 +653,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownfullqty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,7 +683,6 @@
         private System.Windows.Forms.RadioButton radiobtnpercentage;
         private System.Windows.Forms.Label lbldiscount;
         private System.Windows.Forms.Label lblfullqty;
-        private System.Windows.Forms.NumericUpDown numericUpDownfullqty;
         private System.Windows.Forms.TextBox txtcontact;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblcontact;
@@ -715,7 +696,6 @@
         private System.Windows.Forms.Label Invoice;
         private System.Windows.Forms.Label totallblinvoice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnupdateitem;
         private System.Windows.Forms.Button tnadditem;
         private System.Windows.Forms.Label totallbl;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
@@ -727,5 +707,6 @@
         private System.Windows.Forms.Label lblcustomerid;
         private System.Windows.Forms.Button btncusadd;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
