@@ -310,10 +310,10 @@
             // 
             this.lblqty.AutoSize = true;
             this.lblqty.BackColor = System.Drawing.Color.Transparent;
-            this.lblqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblqty.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblqty.Location = new System.Drawing.Point(6, 132);
             this.lblqty.Name = "lblqty";
-            this.lblqty.Size = new System.Drawing.Size(36, 20);
+            this.lblqty.Size = new System.Drawing.Size(41, 20);
             this.lblqty.TabIndex = 23;
             this.lblqty.Text = "Qty";
             // 
