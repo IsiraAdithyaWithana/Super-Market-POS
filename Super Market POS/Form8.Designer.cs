@@ -380,10 +380,10 @@
             // 
             this.btncusadd.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btncusadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncusadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncusadd.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncusadd.Location = new System.Drawing.Point(302, 84);
             this.btncusadd.Name = "btncusadd";
-            this.btncusadd.Size = new System.Drawing.Size(68, 28);
+            this.btncusadd.Size = new System.Drawing.Size(73, 28);
             this.btncusadd.TabIndex = 33;
             this.btncusadd.Text = "Enter";
             this.btncusadd.UseVisualStyleBackColor = false;
