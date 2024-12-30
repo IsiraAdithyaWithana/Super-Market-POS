@@ -221,7 +221,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 25);
+            this.label1.Location = new System.Drawing.Point(30, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 31);
             this.label1.TabIndex = 3;
