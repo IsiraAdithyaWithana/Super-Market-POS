@@ -289,7 +289,7 @@
             // 
             this.txtitemcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtitemcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtitemcode.Location = new System.Drawing.Point(103, 33);
+            this.txtitemcode.Location = new System.Drawing.Point(111, 33);
             this.txtitemcode.Name = "txtitemcode";
             this.txtitemcode.Size = new System.Drawing.Size(199, 31);
             this.txtitemcode.TabIndex = 22;
@@ -321,10 +321,10 @@
             // 
             this.lblitemcode.AutoSize = true;
             this.lblitemcode.BackColor = System.Drawing.Color.Transparent;
-            this.lblitemcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitemcode.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblitemcode.Location = new System.Drawing.Point(5, 37);
             this.lblitemcode.Name = "lblitemcode";
-            this.lblitemcode.Size = new System.Drawing.Size(92, 20);
+            this.lblitemcode.Size = new System.Drawing.Size(104, 20);
             this.lblitemcode.TabIndex = 22;
             this.lblitemcode.Text = "Item Code";
             // 
