@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,11 @@ namespace Super_Market_POS
 
         string connectionString;
         int userId;
-        public Form7(string connStr,int user)
+        public Form7(string connStr, int useridentifier)
         {
             InitializeComponent();
             connectionString = connStr;
-            userId = user;
+            userId = useridentifier;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -52,9 +53,10 @@ namespace Super_Market_POS
         private void button4_Click(object sender, EventArgs e)
         {
 
-            Form12 form12 = new Form12(connectionString,userId);
+            Form12 form12 = new Form12(connectionString, userId);
             this.Hide();
-            form12.Show();
+            form12.ShowDialog();
+            this.Show();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -86,10 +88,11 @@ namespace Super_Market_POS
             total += GetLabelValue(label26);
             total += GetLabelValue(label27);
 
-            
+
 
             // Display the total in label28
-            label28.Text = total.ToString();
+            label28.Text = "Rs. " + total.ToString("F2");
+
         }
 
         private decimal GetLabelValue(Label label)
@@ -114,7 +117,7 @@ namespace Super_Market_POS
             label18.Text = result.ToString();
             UpdateTotal();
         }
-    
+
 
         private void label18_Click(object sender, EventArgs e)
         {
@@ -123,15 +126,15 @@ namespace Super_Market_POS
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            
+
             decimal value = numericUpDown1.Value;
-           
+
             decimal result = value * 1;
 
             label17.Text = result.ToString();
             UpdateTotal();
-    
-}
+        }
+
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
@@ -173,6 +176,7 @@ namespace Super_Market_POS
             decimal result = value * 10;
 
             label21.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown7_ValueChanged(object sender, EventArgs e)
@@ -182,6 +186,7 @@ namespace Super_Market_POS
             decimal result = value * 20;
 
             label22.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
@@ -191,6 +196,7 @@ namespace Super_Market_POS
             decimal result = value * 50;
 
             label23.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
@@ -200,6 +206,7 @@ namespace Super_Market_POS
             decimal result = value * 100;
 
             label24.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown12_ValueChanged(object sender, EventArgs e)
@@ -209,6 +216,7 @@ namespace Super_Market_POS
             decimal result = value * 500;
 
             label25.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown11_ValueChanged(object sender, EventArgs e)
@@ -218,6 +226,7 @@ namespace Super_Market_POS
             decimal result = value * 1000;
 
             label26.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void numericUpDown10_ValueChanged(object sender, EventArgs e)
@@ -227,175 +236,103 @@ namespace Super_Market_POS
             decimal result = value * 5000;
 
             label27.Text = result.ToString();
+            UpdateTotal();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             try
             {
-                // Parse the total cash from label28
-                decimal shiftCloseAmount = decimal.Parse(label28.Text);
+                decimal endAmount = decimal.Parse(label28.Text.Replace("Rs. ", "")); // Get the end amount for the shift
 
-                // Fetch the Shift Open Amount from the database
-                decimal shiftOpenAmount = GetShiftOpenAmount();
-
-                // Handle cases where fetching the open amount fails
-                if (shiftOpenAmount == -1)
-                {
-                    return; // Stop further execution
-                }
-
-                // Compare Shift Close Amount with Shift Open Amount
-                if (shiftCloseAmount != shiftOpenAmount)
-                {
-                    MessageBox.Show(
-                        "Shift Close Amount does not match the Shift Open Amount. Please verify the values.",
-                        "Validation Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
-                    return; // Stop further execution
-                }
-                // If amounts match, update the database
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    string updateQuery = @"
-                UPDATE CashDrawer
-                SET EndTime = GETDATE(), EndAmount = @EndAmount, IsMatched = 1
-                WHERE UserID = @UserID AND EndTime IS NULL";
-
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                    // Fetch the last shift's StartAmount
+                    string selectQuery = "SELECT TOP 1 StartAmount FROM CashDrawer WHERE EndTime IS NULL ORDER BY StartTime DESC";
+                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@EndAmount", shiftCloseAmount);
-                        cmd.Parameters.AddWithValue("@UserID", userId);
+                        object result = selectCmd.ExecuteScalar();
+                        decimal? lastStartAmount = result != DBNull.Value ? (decimal?)result : null;
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        // If the amounts do not match, show an error message
+                        if (lastStartAmount != endAmount)
                         {
-                            MessageBox.Show(
-                                "Shift closed successfully!",
-                                "Success",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                            );
+                            MessageBox.Show("Mismatch detected: End amount does not match the start amount of the next shift.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
                         }
-                        else
+
+                        // If amounts match, update the database with EndTime and EndAmount
+                        string updateQuery = "UPDATE CashDrawer SET EndAmount = @EndAmount, EndTime = GETDATE() WHERE EndTime IS NULL";
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
                         {
-                            MessageBox.Show(
-                                "No active shift found to close.",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning
-                            );
-                              
+                            updateCmd.Parameters.AddWithValue("@EndAmount", endAmount);
+                            updateCmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Shift closed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    $"An error occurred while closing the shift: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private decimal GetShiftOpenAmount()
-        {
-            throw new NotImplementedException();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+
+      
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             try
             {
-                // Step 1: Get the Total Cash (Shift Close Amount) from label28
-                decimal shiftCloseAmount = decimal.Parse(label28.Text);
+                decimal dayEndAmount = decimal.Parse(label28.Text.Replace("Rs. ", "")); // Get the total amount for the day
 
-                // Step 2: Fetch the Shift Open Amount from the database
-                decimal shiftOpenAmount = GetShiftOpenAmount();
-
-                // If the open amount couldn't be retrieved, stop further execution
-                if (shiftOpenAmount == -1)
-                {
-                    return;
-                }
-
-                // Step 3: Compare Shift Close Amount with Shift Open Amount
-                if (shiftCloseAmount != shiftOpenAmount)
-                {
-                    MessageBox.Show(
-                        "Shift Close Amount does not match the Shift Open Amount. Please verify and try again.",
-                        "Validation Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
-                    return;
-                }
-
-                // Step 4: Update the database to close the shift
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
+                    // Debug: Log the connection state
+                    Console.WriteLine("Connection Open: " + conn.State);
 
-                    string updateQuery = @"
-                UPDATE CashDrawer
-                SET EndTime = GETDATE(), EndAmount = @EndAmount, IsMatched = 1
-                WHERE UserID = @UserID AND EndTime IS NULL";
 
+                    // Update the last record to close the day
+                    string updateQuery = "UPDATE CashDrawer SET EndAmount = @EndAmount, EndTime = GETDATE() WHERE EndTime IS NULL";
+                    // Debug: Log the query being executed
+                    Console.WriteLine("Query: " + updateQuery);
                     using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@EndAmount", shiftCloseAmount);
-                        cmd.Parameters.AddWithValue("@UserID", userId);
+                        cmd.Parameters.AddWithValue("@EndAmount", dayEndAmount);
+                        // Debug: Log parameter values
+                        Console.WriteLine("Parameter EndAmount: " + dayEndAmount);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
 
+                        // Debug: Log the rows affected
+                        Console.WriteLine("Rows Affected: " + rowsAffected);
+
                         if (rowsAffected > 0)
                         {
-                            // Success: Shift closed successfully
-                            MessageBox.Show(
-                                "Shift closed successfully!",
-                                "Success",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                            );
-                            ResetFields(); // Clear inputs and reset the form
+                            MessageBox.Show("Day closed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            // No active shift found to close
-                            MessageBox.Show(
-                                "No active shift found for this user. Please start a shift first.",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning
-                            );
+                            MessageBox.Show("No records updated. Please check if there is an open day to close.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
+
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Handle unexpected errors
-                MessageBox.Show(
-                    $"An error occurred while closing the shift: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        private void ResetFields()
-        {
-            throw new NotImplementedException();
         }
     }
 }
+
+
