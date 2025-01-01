@@ -115,6 +115,12 @@ namespace Super_Market_POS
                     HeaderText = "Phone Number",
                     DataPropertyName = "Phone_Number"
                 });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Last_Purchase_Date",
+                    HeaderText = "Last Purchase Date",
+                    DataPropertyName = "Last_Purchase_Date"
+                });
             }
             else if (tableName == "ViewUserDetails")
             {
@@ -141,6 +147,18 @@ namespace Super_Market_POS
                     Name = "Username",
                     HeaderText = "Username",
                     DataPropertyName = "username"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Phone_Number",
+                    HeaderText = "Phone Number",
+                    DataPropertyName = "Phone_Number"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Total_Sales",
+                    HeaderText = "Total Sales Amount",
+                    DataPropertyName = "Total_Sales"
                 });
             }
             else if (tableName == "ViewSalesSummary")
