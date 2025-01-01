@@ -52,11 +52,9 @@ namespace Super_Market_POS
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             Form12 form12 = new Form12(connectionString, userId);
             this.Hide();
-            form12.ShowDialog();
-            this.Show();
+            form12.Show();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -245,32 +243,62 @@ namespace Super_Market_POS
             {
                 decimal endAmount = decimal.Parse(label28.Text.Replace("Rs. ", "")); // Get the end amount for the shift
 
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn1 = new SqlConnection(connectionString))
                 {
-                    conn.Open();
+                    conn1.Open();
 
-                    // Fetch the last shift's StartAmount
-                    string selectQuery = "SELECT TOP 1 StartAmount FROM CashDrawer WHERE EndTime IS NULL ORDER BY StartTime DESC";
-                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, conn))
+                    // Fetch the last shift's StartAmount and StartTime
+                    string selectQuery = "SELECT TOP 1 StartAmount, StartTime FROM CashDrawer WHERE EndTime IS NULL ORDER BY StartTime DESC";
+                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, conn1))
+                    using (SqlDataReader reader = selectCmd.ExecuteReader())
                     {
-                        object result = selectCmd.ExecuteScalar();
-                        decimal? lastStartAmount = result != DBNull.Value ? (decimal?)result : null;
-
-                        // If the amounts do not match, show an error message
-                        if (lastStartAmount != endAmount)
+                        if (reader.Read())
                         {
-                            MessageBox.Show("Mismatch detected: End amount does not match the start amount of the next shift.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
+                            decimal startAmount = reader.GetDecimal(0);
+                            DateTime startTime = reader.GetDateTime(1);
+
+                            // Use a new connection for the sales query
+                            using (SqlConnection conn2 = new SqlConnection(connectionString))
+                            {
+                                conn2.Open();
+
+                                // Calculate total sales during the shift
+                                string salesQuery = @"
+                            SELECT SUM(Total_Amount) 
+                            FROM Sale 
+                            WHERE Sale_Date >= @StartTime AND Sale_Date <= GETDATE()";
+                                using (SqlCommand salesCmd = new SqlCommand(salesQuery, conn2))
+                                {
+                                    salesCmd.Parameters.AddWithValue("@StartTime", startTime);
+                                    object salesResult = salesCmd.ExecuteScalar();
+                                    decimal totalSales = salesResult != DBNull.Value ? Convert.ToDecimal(salesResult) : 0;
+
+                                    // Calculate the expected EndAmount
+                                    decimal expectedEndAmount = startAmount + totalSales;
+
+                                    // If the amounts do not match, show an error message
+                                    if (endAmount != expectedEndAmount)
+                                    {
+                                        MessageBox.Show($"Mismatch detected: Expected End Amount is {expectedEndAmount:C}, but received {endAmount:C}.",
+                                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+
+                                    // Update the CashDrawer table
+                                    string updateQuery = "UPDATE CashDrawer SET EndAmount = @EndAmount, EndTime = GETDATE(), IsMatched = 1 WHERE EndTime IS NULL";
+                                    using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn2))
+                                    {
+                                        updateCmd.Parameters.AddWithValue("@EndAmount", endAmount);
+                                        updateCmd.ExecuteNonQuery();
+
+                                        MessageBox.Show("Shift closed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                            }
                         }
-
-                        // If amounts match, update the database with EndTime and EndAmount
-                        string updateQuery = "UPDATE CashDrawer SET EndAmount = @EndAmount, EndTime = GETDATE() WHERE EndTime IS NULL";
-                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                        else
                         {
-                            updateCmd.Parameters.AddWithValue("@EndAmount", endAmount);
-                            updateCmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Shift closed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("No active shift found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -285,45 +313,72 @@ namespace Super_Market_POS
 
 
 
-      
+
+
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             try
             {
-                decimal dayEndAmount = decimal.Parse(label28.Text.Replace("Rs. ", "")); // Get the total amount for the day
+                decimal endAmount = decimal.Parse(label28.Text.Replace("Rs. ", "")); // Get the end amount for the shift
 
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn1 = new SqlConnection(connectionString))
                 {
-                    conn.Open();
-                    // Debug: Log the connection state
-                    Console.WriteLine("Connection Open: " + conn.State);
+                    conn1.Open();
 
-
-                    // Update the last record to close the day
-                    string updateQuery = "UPDATE CashDrawer SET EndAmount = @EndAmount, EndTime = GETDATE() WHERE EndTime IS NULL";
-                    // Debug: Log the query being executed
-                    Console.WriteLine("Query: " + updateQuery);
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                    // Fetch the last shift's StartAmount and StartTime
+                    string selectQuery = "SELECT TOP 1 StartAmount, StartTime FROM CashDrawer WHERE EndTime IS NULL ORDER BY StartTime DESC";
+                    using (SqlCommand selectCmd = new SqlCommand(selectQuery, conn1))
+                    using (SqlDataReader reader = selectCmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@EndAmount", dayEndAmount);
-                        // Debug: Log parameter values
-                        Console.WriteLine("Parameter EndAmount: " + dayEndAmount);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        // Debug: Log the rows affected
-                        Console.WriteLine("Rows Affected: " + rowsAffected);
-
-                        if (rowsAffected > 0)
+                        if (reader.Read())
                         {
-                            MessageBox.Show("Day closed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            decimal startAmount = reader.GetDecimal(0);
+                            DateTime startTime = reader.GetDateTime(1);
+
+                            // Use a new connection for the sales query
+                            using (SqlConnection conn2 = new SqlConnection(connectionString))
+                            {
+                                conn2.Open();
+
+                                // Calculate total sales during the shift
+                                string salesQuery = @"
+                            SELECT SUM(Total_Amount) 
+                            FROM Sale 
+                            WHERE Sale_Date >= @StartTime AND Sale_Date <= GETDATE()";
+                                using (SqlCommand salesCmd = new SqlCommand(salesQuery, conn2))
+                                {
+                                    salesCmd.Parameters.AddWithValue("@StartTime", startTime);
+                                    object salesResult = salesCmd.ExecuteScalar();
+                                    decimal totalSales = salesResult != DBNull.Value ? Convert.ToDecimal(salesResult) : 0;
+
+                                    // Calculate the expected EndAmount
+                                    decimal expectedEndAmount = startAmount + totalSales;
+
+                                    // If the amounts do not match, show an error message
+                                    if (endAmount != expectedEndAmount)
+                                    {
+                                        MessageBox.Show($"Mismatch detected: Expected End Amount is {expectedEndAmount:C}, but received {endAmount:C}.",
+                                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+
+                                    // Update the CashDrawer table
+                                    string updateQuery = "UPDATE CashDrawer SET EndAmount = @EndAmount, EndTime = GETDATE(), IsMatched = 1 WHERE EndTime IS NULL";
+                                    using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn2))
+                                    {
+                                        updateCmd.Parameters.AddWithValue("@EndAmount", endAmount);
+                                        updateCmd.ExecuteNonQuery();
+
+                                        MessageBox.Show("Shift closed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No records updated. Please check if there is an open day to close.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("No active shift found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-
                     }
                 }
             }
