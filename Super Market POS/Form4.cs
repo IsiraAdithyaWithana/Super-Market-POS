@@ -344,10 +344,55 @@ namespace Super_Market_POS
                     DataPropertyName = "Date"
                 });
             }
-                // Add similar blocks for other tables like Sale, Stock, Discount, etc.
+            else if (tableName == "MismatchLog")
+            {
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "LogID",
+                    HeaderText = "Log ID",
+                    DataPropertyName = "LogID"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "DrawerID",
+                    HeaderText = "Drawer ID",
+                    DataPropertyName = "DrawerID"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Expected_Amount",
+                    HeaderText = "Expected Amount",
+                    DataPropertyName = "Expected_Amount"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Actual_Amount",
+                    HeaderText = "Actual Amount",
+                    DataPropertyName = "Actual_Amount"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Time_Stamp",
+                    HeaderText = "Time Stamp",
+                    DataPropertyName = "Time_Stamp"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "UserID",
+                    HeaderText = "User ID",
+                    DataPropertyName = "UserID"
+                });
+                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                {
+                    Name = "Remarks",
+                    HeaderText = "Remarks",
+                    DataPropertyName = "Remarks"
+                });
+            }
+            // Add similar blocks for other tables like Sale, Stock, Discount, etc.
 
-                // Optional: Center align cell content
-                foreach (DataGridViewColumn column in dataGridView1.Columns)
+            // Optional: Center align cell content
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
@@ -440,6 +485,13 @@ namespace Super_Market_POS
             {
                 MessageBox.Show("Search error: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadData("SELECT * FROM MismatchLog");
+            InitializeDataGridView("MismatchLog");
+            lblReport.Text = "Mismatch Report";
         }
     }
 }

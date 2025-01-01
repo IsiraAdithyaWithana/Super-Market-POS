@@ -35,13 +35,14 @@
             this.lblReport = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDiscounts = new System.Windows.Forms.Button();
+            this.btnCashDrawer = new System.Windows.Forms.Button();
             this.btnSalesDetails = new System.Windows.Forms.Button();
             this.btnStockOverview = new System.Windows.Forms.Button();
             this.btnSalesSummary = new System.Windows.Forms.Button();
             this.btnUserDetails = new System.Windows.Forms.Button();
             this.btnCustomerDetails = new System.Windows.Forms.Button();
-            this.btnCashDrawer = new System.Windows.Forms.Button();
-            this.btnDiscounts = new System.Windows.Forms.Button();
+            this.btnMismatchLog = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -119,6 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnMismatchLog);
             this.panel1.Controls.Add(this.btnDiscounts);
             this.panel1.Controls.Add(this.btnCashDrawer);
             this.panel1.Controls.Add(this.btnSalesDetails);
@@ -130,6 +132,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 231);
             this.panel1.TabIndex = 30;
+            // 
+            // btnDiscounts
+            // 
+            this.btnDiscounts.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDiscounts.AutoSize = true;
+            this.btnDiscounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiscounts.Location = new System.Drawing.Point(385, 151);
+            this.btnDiscounts.Name = "btnDiscounts";
+            this.btnDiscounts.Size = new System.Drawing.Size(182, 39);
+            this.btnDiscounts.TabIndex = 38;
+            this.btnDiscounts.Text = "Discounts";
+            this.btnDiscounts.UseVisualStyleBackColor = true;
+            this.btnDiscounts.Click += new System.EventHandler(this.btnDiscounts_Click);
+            // 
+            // btnCashDrawer
+            // 
+            this.btnCashDrawer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCashDrawer.AutoSize = true;
+            this.btnCashDrawer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashDrawer.Location = new System.Drawing.Point(90, 151);
+            this.btnCashDrawer.Name = "btnCashDrawer";
+            this.btnCashDrawer.Size = new System.Drawing.Size(182, 39);
+            this.btnCashDrawer.TabIndex = 37;
+            this.btnCashDrawer.Text = "Cash Drawer";
+            this.btnCashDrawer.UseVisualStyleBackColor = true;
+            this.btnCashDrawer.Click += new System.EventHandler(this.btnCashDrawer_Click);
             // 
             // btnSalesDetails
             // 
@@ -149,7 +177,7 @@
             this.btnStockOverview.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStockOverview.AutoSize = true;
             this.btnStockOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStockOverview.Location = new System.Drawing.Point(836, 144);
+            this.btnStockOverview.Location = new System.Drawing.Point(682, 151);
             this.btnStockOverview.Name = "btnStockOverview";
             this.btnStockOverview.Size = new System.Drawing.Size(182, 39);
             this.btnStockOverview.TabIndex = 35;
@@ -196,31 +224,18 @@
             this.btnCustomerDetails.UseVisualStyleBackColor = true;
             this.btnCustomerDetails.Click += new System.EventHandler(this.btnCustomerDetails_Click);
             // 
-            // btnCashDrawer
+            // btnMismatchLog
             // 
-            this.btnCashDrawer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCashDrawer.AutoSize = true;
-            this.btnCashDrawer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashDrawer.Location = new System.Drawing.Point(236, 144);
-            this.btnCashDrawer.Name = "btnCashDrawer";
-            this.btnCashDrawer.Size = new System.Drawing.Size(182, 39);
-            this.btnCashDrawer.TabIndex = 37;
-            this.btnCashDrawer.Text = "Cash Drawer";
-            this.btnCashDrawer.UseVisualStyleBackColor = true;
-            this.btnCashDrawer.Click += new System.EventHandler(this.btnCashDrawer_Click);
-            // 
-            // btnDiscounts
-            // 
-            this.btnDiscounts.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDiscounts.AutoSize = true;
-            this.btnDiscounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiscounts.Location = new System.Drawing.Point(541, 144);
-            this.btnDiscounts.Name = "btnDiscounts";
-            this.btnDiscounts.Size = new System.Drawing.Size(182, 39);
-            this.btnDiscounts.TabIndex = 38;
-            this.btnDiscounts.Text = "Discounts";
-            this.btnDiscounts.UseVisualStyleBackColor = true;
-            this.btnDiscounts.Click += new System.EventHandler(this.btnDiscounts_Click);
+            this.btnMismatchLog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMismatchLog.AutoSize = true;
+            this.btnMismatchLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMismatchLog.Location = new System.Drawing.Point(983, 151);
+            this.btnMismatchLog.Name = "btnMismatchLog";
+            this.btnMismatchLog.Size = new System.Drawing.Size(182, 39);
+            this.btnMismatchLog.TabIndex = 39;
+            this.btnMismatchLog.Text = "Mismatch Log";
+            this.btnMismatchLog.UseVisualStyleBackColor = true;
+            this.btnMismatchLog.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form4
             // 
@@ -264,5 +279,6 @@
         private System.Windows.Forms.Button btnCustomerDetails;
         private System.Windows.Forms.Button btnDiscounts;
         private System.Windows.Forms.Button btnCashDrawer;
+        private System.Windows.Forms.Button btnMismatchLog;
     }
 }
