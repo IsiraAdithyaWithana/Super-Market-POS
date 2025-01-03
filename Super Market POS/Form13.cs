@@ -14,11 +14,12 @@ namespace Super_Market_POS
 {
     public partial class Form13 : Form
     {
-        private readonly string connectionString;
-        private readonly int userId;
-        public Form13()
+        string connectionString;
+        int userId;
+        public Form13(string connStr, int user)
         {
             InitializeComponent();
+            connectionString = connStr;
             LoadUserData();
         }
 
@@ -32,16 +33,16 @@ namespace Super_Market_POS
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"
-        SELECT 
-            U.UserID, 
-            U.Full_Name, 
-            U.NIC, 
-            U.username, 
-            UP.Phone_Number
-        FROM 
-            Users U
-        LEFT JOIN 
-            User_Phone UP ON U.UserID = UP.UserID";
+                     SELECT 
+                         U.UserID, 
+                         U.Full_Name, 
+                         U.NIC, 
+                         U.username, 
+                         UP.Phone_Number
+                     FROM 
+                         Users U
+                        LEFT JOIN 
+                         User_Phone UP ON U.UserID = UP.UserID";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 DataTable dataTable = new DataTable();
@@ -57,15 +58,15 @@ namespace Super_Market_POS
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"
-                SELECT 
+                 SELECT 
                     U.UserID, 
                     U.Full_Name, 
                     U.NIC, 
                     U.username, 
                     UP.Phone_Number
-                FROM 
+                 FROM 
                     Users U
-                LEFT JOIN 
+                 LEFT JOIN 
                     User_Phone UP ON U.UserID = UP.UserID";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
