@@ -135,7 +135,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page33;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(869, 93);
+            this.pictureBox2.Location = new System.Drawing.Point(868, 93);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(261, 165);
             this.pictureBox2.TabIndex = 15;
