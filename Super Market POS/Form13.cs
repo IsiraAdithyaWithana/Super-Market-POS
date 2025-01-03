@@ -33,41 +33,40 @@ namespace Super_Market_POS
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"
-                     SELECT 
-                         U.UserID, 
-                         U.Full_Name, 
-                         U.NIC, 
-                         U.username, 
-                         UP.Phone_Number
-                     FROM 
-                         Users U
-                        LEFT JOIN 
-                         User_Phone UP ON U.UserID = UP.UserID";
+            SELECT 
+                U.UserID AS User_ID, 
+                U.Full_Name AS Full_Name, 
+                U.NIC AS NIC, 
+                U.username AS Username, 
+                UP.Phone_Number AS Phone_Number
+            FROM 
+                Users U
+            LEFT JOIN 
+                User_Phone UP ON U.UserID = UP.UserID";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                dataGridView1.DataSource = dataTable; // Ensure dataGridViewUsers is correctly named
+                dataGridView1.DataSource = dataTable;
             }
         }
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"
-                 SELECT 
-                    U.UserID, 
-                    U.Full_Name, 
-                    U.NIC, 
-                    U.username, 
-                    UP.Phone_Number
-                 FROM 
-                    Users U
-                 LEFT JOIN 
-                    User_Phone UP ON U.UserID = UP.UserID";
+    SELECT 
+        U.UserID AS [User ID], 
+        U.Full_Name AS [Full Name], 
+        U.NIC, 
+        U.username AS [Username], 
+        UP.Phone_Number AS [Phone Number]
+    FROM 
+        Users U
+    LEFT JOIN 
+        User_Phone UP ON U.UserID = UP.UserID";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 DataTable dataTable = new DataTable();
@@ -131,7 +130,9 @@ namespace Super_Market_POS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            Form12 form12 = new Form12(connectionString, userId);
+            this.Hide();
+            form12.Show();
         }
     }
 }
