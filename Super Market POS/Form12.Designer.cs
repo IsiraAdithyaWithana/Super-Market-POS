@@ -64,7 +64,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page2;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(629, 264);
+            this.pictureBox3.Location = new System.Drawing.Point(602, 264);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(261, 165);
             this.pictureBox3.TabIndex = 3;
@@ -76,7 +76,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(629, 93);
+            this.pictureBox6.Location = new System.Drawing.Point(602, 93);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(261, 165);
             this.pictureBox6.TabIndex = 7;
@@ -99,10 +99,10 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.White;
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(911, 264);
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox11.Location = new System.Drawing.Point(1115, 590);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(261, 165);
+            this.pictureBox11.Size = new System.Drawing.Size(137, 79);
             this.pictureBox11.TabIndex = 12;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
@@ -112,7 +112,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.White;
             this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(350, 93);
+            this.pictureBox12.Location = new System.Drawing.Point(335, 93);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(261, 165);
             this.pictureBox12.TabIndex = 13;
@@ -124,7 +124,7 @@
             this.pictureBox13.BackColor = System.Drawing.Color.White;
             this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(350, 264);
+            this.pictureBox13.Location = new System.Drawing.Point(335, 264);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(261, 165);
             this.pictureBox13.TabIndex = 14;
@@ -135,7 +135,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::Super_Market_POS.Properties.Resources._1st_page33;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(911, 93);
+            this.pictureBox2.Location = new System.Drawing.Point(868, 93);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(261, 165);
             this.pictureBox2.TabIndex = 15;
