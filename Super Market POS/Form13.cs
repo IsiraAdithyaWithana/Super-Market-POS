@@ -134,5 +134,64 @@ namespace Super_Market_POS
             this.Hide();
             form12.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string fullName = txtFullName.Text;
+
+            if (string.IsNullOrEmpty(fullName))
+            {
+                MessageBox.Show("Please enter a full name to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    // Retrieve the UserID based on the Full Name
+                    string getUserQuery = "SELECT UserID FROM Users WHERE Full_Name = @FullName";
+                    SqlCommand getUserCommand = new SqlCommand(getUserQuery, connection, transaction);
+                    getUserCommand.Parameters.AddWithValue("@FullName", fullName);
+
+                    object result = getUserCommand.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    int userId = Convert.ToInt32(result);
+
+                    // Delete from User_Phone table
+                    string deletePhoneQuery = "DELETE FROM User_Phone WHERE UserID = @UserID";
+                    SqlCommand deletePhoneCommand = new SqlCommand(deletePhoneQuery, connection, transaction);
+                    deletePhoneCommand.Parameters.AddWithValue("@UserID", userId);
+                    deletePhoneCommand.ExecuteNonQuery();
+
+                    // Delete from Users table
+                    string deleteUserQuery = "DELETE FROM Users WHERE UserID = @UserID";
+                    SqlCommand deleteUserCommand = new SqlCommand(deleteUserQuery, connection, transaction);
+                    deleteUserCommand.Parameters.AddWithValue("@UserID", userId);
+                    deleteUserCommand.ExecuteNonQuery();
+
+                    transaction.Commit();
+
+                    MessageBox.Show("User deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Refresh the DataGridView
+                    LoadUserData();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
