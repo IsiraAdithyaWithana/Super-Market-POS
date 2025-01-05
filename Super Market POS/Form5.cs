@@ -36,7 +36,7 @@ namespace Super_Market_POS
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "select CustomerID, First_Name, Last_Name, Address, Email, RegisterDate, Phone_Number FROM ShowCustomerDetails";
+                string query = "select CustomerID, First_Name, Last_Name, Address, Email, RegisterDate, Phone_Number FROM ViewCustomerDetails";
 
                 try
                 {
@@ -369,7 +369,7 @@ namespace Super_Market_POS
 
                 // Define the SQL query with search conditions for ID or Name
                 string query = @"
-                select CustomerID, First_Name, Last_Name, Address, Email, RegisterDate, Phone_Number FROM ShowCustomerDetails
+                select CustomerID, First_Name, Last_Name, Address, Email, RegisterDate, Phone_Number FROM ViewCustomerDetails
             
             WHERE 
                 CustomerID LIKE @Search OR 
